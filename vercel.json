@@ -15,6 +15,14 @@
       "destination": "/sistemas/restaurante.html"
     },
     {
+      "source": "/sistemas/bordadoras",
+      "destination": "/sistemas/bordadoras.html"
+    },
+    {
+      "source": "/sistemas/a-medida",
+      "destination": "/sistemas/a-medida.html"
+    },
+    {
       "source": "/privacidad",
       "destination": "/privacidad.html"
     }

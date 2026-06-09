@@ -937,6 +937,14 @@ a {
   --product: var(--red);
 }
 
+.product-bordadoras {
+  --product: #0f766e;
+}
+
+.product-a-medida {
+  --product: #475569;
+}
+
 .product-page .page-hero h1 span,
 .product-page .card-link,
 .product-page .step span {
@@ -1641,6 +1649,14 @@ a {
 
 .preview-main.restaurant span {
   background: linear-gradient(90deg, #e5eaf2 0 55%, #b8e6c2 55% 70%, #e5eaf2 70%);
+}
+
+.preview-main.embroidery span {
+  background: linear-gradient(90deg, #e5eaf2 0 44%, #99e3d8 44% 64%, #e5eaf2 64%);
+}
+
+.preview-main.custom span {
+  background: linear-gradient(90deg, #e5eaf2 0 50%, #cbd5e1 50% 68%, #e5eaf2 68%);
 }
 
 .learn-link {
