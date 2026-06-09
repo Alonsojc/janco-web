@@ -39,6 +39,11 @@ function buildLead(payload, req) {
     telefono: clean(payload.telefono),
     sistema: clean(payload.sistema),
     mensaje: clean(payload.mensaje),
+    pagina: clean(payload.pagina) || req.headers.referer || "janco.tech",
+    utm_source: clean(payload.utm_source),
+    utm_medium: clean(payload.utm_medium),
+    utm_campaign: clean(payload.utm_campaign),
+    privacidad: clean(payload.privacidad),
     origen: req.headers.referer || "janco.tech",
     fecha: new Date().toISOString(),
   };
@@ -49,6 +54,7 @@ function validateLead(lead) {
   if (!lead.sistema) return "Selecciona el sistema que te interesa.";
   if (!lead.email && !lead.telefono) return "Déjanos un correo o teléfono para contactarte.";
   if (lead.email && !EMAIL_RE.test(lead.email)) return "Revisa que el correo esté bien escrito.";
+  if (lead.privacidad !== "acepto") return "Acepta el aviso de privacidad para enviar la solicitud.";
   return "";
 }
 
@@ -61,7 +67,10 @@ function leadText(lead) {
     `Correo: ${lead.email || "-"}`,
     `Telefono: ${lead.telefono || "-"}`,
     `Sistema: ${lead.sistema}`,
-    `Origen: ${lead.origen}`,
+    `Pagina: ${lead.pagina}`,
+    `UTM source: ${lead.utm_source || "-"}`,
+    `UTM medium: ${lead.utm_medium || "-"}`,
+    `UTM campaign: ${lead.utm_campaign || "-"}`,
     `Fecha: ${lead.fecha}`,
     "",
     "Mensaje:",
@@ -69,21 +78,40 @@ function leadText(lead) {
   ].join("\n");
 }
 
-async function sendEmail(lead) {
+function autoReplyText(lead) {
+  const nombre = lead.nombre.split(" ")[0] || lead.nombre;
+
+  return [
+    `Hola ${nombre},`,
+    "",
+    "Gracias por contactar a Janco. Recibimos tu solicitud y vamos a revisarla para proponerte una demo aterrizada a tu operación.",
+    "",
+    `Sistema de interés: ${lead.sistema}`,
+    "",
+    "Normalmente el siguiente paso es entender tu flujo actual, revisar qué módulos necesitas y enseñarte una demo corta con un caso parecido al tuyo.",
+    "",
+    "Si prefieres avanzar por WhatsApp, también puedes escribirnos al +52 442 272 0445.",
+    "",
+    "Saludos,",
+    "Janco",
+  ].join("\n");
+}
+
+async function postResendEmail({ from, to, replyTo, subject, text }) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return { skipped: true };
 
-  const to = process.env.LEADS_TO_EMAIL || "alonsojaneiro@hotmail.com";
-  const from = process.env.LEADS_FROM_EMAIL || "Janco <onboarding@resend.dev>";
+  const body = {
+    from,
+    subject,
+    text,
+    to: Array.isArray(to) ? to : [to],
+  };
+
+  if (replyTo) body.reply_to = replyTo;
 
   const response = await fetch("https://api.resend.com/emails", {
-    body: JSON.stringify({
-      from,
-      reply_to: lead.email || undefined,
-      subject: `Nuevo lead Janco: ${lead.sistema}`,
-      text: leadText(lead),
-      to: [to],
-    }),
+    body: JSON.stringify(body),
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
@@ -99,15 +127,49 @@ async function sendEmail(lead) {
   return { ok: true };
 }
 
+async function sendInternalEmail(lead) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return { skipped: true };
+
+  const to = process.env.LEADS_TO_EMAIL || "alonsojaneiro@hotmail.com";
+  const from = process.env.LEADS_FROM_EMAIL || "Janco <onboarding@resend.dev>";
+
+  return postResendEmail({
+    from,
+    replyTo: lead.email || undefined,
+    subject: `Nuevo lead Janco: ${lead.sistema}`,
+    text: leadText(lead),
+    to,
+  });
+}
+
+async function sendAutoReply(lead) {
+  if (!lead.email) return { skipped: true };
+
+  const from = process.env.AUTOREPLY_FROM_EMAIL || process.env.LEADS_FROM_EMAIL || "Janco <onboarding@resend.dev>";
+
+  return postResendEmail({
+    from,
+    subject: "Recibimos tu solicitud en Janco",
+    text: autoReplyText(lead),
+    to: lead.email,
+  });
+}
+
 async function sendWebhook(lead) {
   const url = process.env.LEADS_WEBHOOK_URL;
   if (!url) return { skipped: true };
 
+  const headers = {
+    "Content-Type": "application/json",
+  };
+  if (process.env.LEADS_WEBHOOK_SECRET) {
+    headers["X-Janco-Lead-Secret"] = process.env.LEADS_WEBHOOK_SECRET;
+  }
+
   const response = await fetch(url, {
     body: JSON.stringify(lead),
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers,
     method: "POST",
   });
 
@@ -150,12 +212,17 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    const results = await Promise.allSettled([sendEmail(lead), sendWebhook(lead)]);
+    const results = await Promise.allSettled([sendInternalEmail(lead), sendWebhook(lead)]);
     const delivered = results.some((result) => result.status === "fulfilled" && result.value.ok);
 
     if (!delivered) {
       throw new Error("No hubo ningún canal de entrega configurado o exitoso.");
     }
+
+    const autoReply = await Promise.allSettled([sendAutoReply(lead)]);
+    autoReply.forEach((result) => {
+      if (result.status === "rejected") console.error(result.reason);
+    });
 
     return sendJson(res, 200, {
       message: "Listo. Recibimos tu solicitud y te contactaremos pronto.",

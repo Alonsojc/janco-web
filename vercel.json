@@ -13,6 +13,10 @@
     {
       "source": "/sistemas/restaurante",
       "destination": "/sistemas/restaurante.html"
+    },
+    {
+      "source": "/privacidad",
+      "destination": "/privacidad.html"
     }
   ],
   "redirects": [

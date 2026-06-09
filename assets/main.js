@@ -35,6 +35,12 @@ if (demoForm) {
     event.preventDefault();
     const data = new FormData(demoForm);
     const payload = Object.fromEntries(data.entries());
+    const params = new URLSearchParams(window.location.search);
+
+    payload.pagina = window.location.href;
+    ["utm_source", "utm_medium", "utm_campaign"].forEach((key) => {
+      payload[key] = params.get(key) || "";
+    });
 
     setFormStatus("loading", "Enviando solicitud...");
     if (submitButton) submitButton.disabled = true;
