@@ -1,7 +1,20 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/sistemas/arrendamiento-puro",
+      "destination": "/sistemas/arrendamiento-puro.html"
+    },
+    {
+      "source": "/sistemas/panaderia",
+      "destination": "/sistemas/panaderia.html"
+    },
+    {
+      "source": "/sistemas/restaurante",
+      "destination": "/sistemas/restaurante.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/:path*",
