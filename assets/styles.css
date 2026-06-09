@@ -635,6 +635,10 @@ a {
   max-width: var(--max);
 }
 
+.page-hero-grid > * {
+  min-width: 0;
+}
+
 .page-hero p {
   color: var(--ink-soft);
   font-size: clamp(1.04rem, 2vw, 1.22rem);
@@ -829,6 +833,61 @@ a {
   border-bottom: 1px solid var(--line);
   border-top: 1px solid var(--line);
   padding: 66px 24px;
+}
+
+.offer-band {
+  align-items: center;
+  background: var(--ink);
+  color: #fff;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 0.72fr);
+  padding: 34px;
+}
+
+.offer-band h2 {
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  line-height: 1;
+  margin: 12px 0 0;
+}
+
+.offer-band p {
+  color: #dce2ef;
+  line-height: 1.65;
+  margin: 18px 0 0;
+  max-width: 680px;
+}
+
+.offer-prices {
+  display: grid;
+  gap: 12px;
+}
+
+.offer-prices article {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 18px;
+}
+
+.offer-prices span,
+.price-strip span {
+  color: #6f7b92;
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.offer-prices span {
+  color: #cdd5e6;
+}
+
+.offer-prices strong,
+.price-strip strong {
+  display: block;
+  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+  line-height: 1;
+  margin-top: 9px;
 }
 
 .seo-grid {
@@ -1139,6 +1198,11 @@ a {
   .hero h1,
   .page-hero h1 {
     font-size: clamp(2.65rem, 18vw, 4.5rem);
+  }
+
+  .page-hero h1 {
+    font-size: 2.72rem;
+    overflow-wrap: break-word;
   }
 
   .hero-actions,
@@ -1800,6 +1864,25 @@ a {
   padding: 82px 0;
 }
 
+.price-strip {
+  border: 1px solid #dfe5ee;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 0 24px;
+}
+
+.price-strip article {
+  background: #fff;
+  padding: 26px;
+}
+
+.price-strip p {
+  color: #4b5568;
+  line-height: 1.55;
+  margin: 12px 0 0;
+}
+
 .package-grid {
   display: grid;
   gap: 18px;
@@ -2189,6 +2272,8 @@ a {
   }
 
   .benefit-row,
+  .offer-band,
+  .price-strip,
   .package-grid,
   .footer-main {
     grid-template-columns: repeat(2, 1fr);
@@ -2262,6 +2347,8 @@ a {
 
   .stat-grid,
   .dashboard-grid,
+  .offer-band,
+  .price-strip,
   .seo-grid,
   .form-row {
     grid-template-columns: 1fr;
@@ -2301,6 +2388,10 @@ a {
 
   .showcase-card {
     padding: 24px;
+  }
+
+  .offer-band {
+    padding: 26px;
   }
 
   .benefit-row,
