@@ -938,6 +938,80 @@ a {
   width: 8px;
 }
 
+.seo-depth {
+  background: var(--paper);
+  padding: 72px 24px;
+}
+
+.depth-head {
+  max-width: 860px;
+}
+
+.depth-head h2 {
+  font-size: clamp(2.1rem, 3.8vw, 4rem);
+  line-height: 1;
+  margin: 12px 0 0;
+}
+
+.depth-head p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 20px 0 0;
+}
+
+.depth-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+}
+
+.depth-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 22px;
+}
+
+.depth-card h3 {
+  font-size: 1.18rem;
+  line-height: 1.18;
+  margin: 0;
+}
+
+.depth-card p {
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 12px 0 0;
+}
+
+.depth-links {
+  align-items: center;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+  padding-top: 20px;
+}
+
+.depth-links span {
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.depth-links a {
+  border: 1px solid var(--line);
+  color: var(--navy);
+  font-weight: 950;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.depth-links a:hover {
+  border-color: var(--navy);
+}
+
 .faq-section {
   background: var(--paper-soft);
   padding: 70px 24px;
@@ -1113,7 +1187,8 @@ a {
   }
 
   .systems-grid,
-  .workflow {
+  .workflow,
+  .depth-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1175,7 +1250,8 @@ a {
   .systems-grid,
   .proof-grid,
   .workflow,
-  .module-grid {
+  .module-grid,
+  .depth-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2418,6 +2494,7 @@ a {
   }
 
   .seo-strip,
+  .seo-depth,
   .faq-section,
   .legal-content,
   .legal-hero {
