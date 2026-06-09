@@ -39,6 +39,6 @@ if (demoForm) {
       ].join("\n"),
     );
 
-    window.location.href = `mailto:hola@janco.tech?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:alonsojaneiro@hotmail.com?subject=${subject}&body=${body}`;
   });
 }
