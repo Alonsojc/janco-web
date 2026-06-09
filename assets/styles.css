@@ -1872,6 +1872,10 @@ a {
   margin: 0 0 24px;
 }
 
+.price-strip-products {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .price-strip article {
   background: #fff;
   padding: 26px;
