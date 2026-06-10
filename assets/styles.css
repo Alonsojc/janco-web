@@ -1949,7 +1949,9 @@ a {
 }
 
 .price-strip-products {
-  grid-template-columns: repeat(4, 1fr);
+  border: 0;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .price-strip article {
@@ -1957,10 +1959,24 @@ a {
   padding: 26px;
 }
 
+.price-strip-products article {
+  border: 1px solid #dfe5ee;
+  border-radius: 8px;
+  box-shadow: 0 14px 32px rgba(7, 21, 95, 0.06);
+}
+
 .price-strip p {
   color: #4b5568;
   line-height: 1.55;
   margin: 12px 0 0;
+}
+
+.price-note {
+  color: #69758a;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.55;
+  margin: -6px 0 28px;
 }
 
 .package-grid {
