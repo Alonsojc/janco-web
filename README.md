@@ -16,7 +16,7 @@ Dominio principal: https://janco.tech
 ## Guias SEO
 
 - Software de cobranza para arrendadoras en Mexico: https://janco.tech/recursos/software-cobranza-arrendadoras-mexico
-- Software para arrendadoras financieras: https://janco.tech/recursos/software-arrendadoras-financieras
+- Software de arrendamiento puro en Mexico: https://janco.tech/recursos/software-arrendamiento-puro
 - Sistema para panaderia con recetas e inventario: https://janco.tech/recursos/sistema-panaderia-recetas-inventario
 - Software para poke bar: https://janco.tech/recursos/software-poke-bar
 - Sistema para taller de bordado: https://janco.tech/recursos/sistema-taller-bordado

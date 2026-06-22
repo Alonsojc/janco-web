@@ -35,7 +35,7 @@
       "destination": "/recursos/software-cobranza-arrendadoras-mexico.html"
     },
     {
-      "source": "/recursos/software-arrendadoras-financieras",
+      "source": "/recursos/software-arrendamiento-puro",
       "destination": "/recursos/software-arrendadoras-financieras.html"
     },
     {
@@ -60,6 +60,11 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/recursos/software-arrendadoras-financieras",
+      "destination": "/recursos/software-arrendamiento-puro",
+      "permanent": true
+    },
     {
       "source": "/:path*",
       "has": [
