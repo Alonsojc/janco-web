@@ -23,6 +23,10 @@
       "destination": "/sistemas/a-medida.html"
     },
     {
+      "source": "/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras",
+      "destination": "/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras.html"
+    },
+    {
       "source": "/privacidad",
       "destination": "/privacidad.html"
     }
