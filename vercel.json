@@ -27,6 +27,26 @@
       "destination": "/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras.html"
     },
     {
+      "source": "/recursos/software-cobranza-arrendadoras-mexico",
+      "destination": "/recursos/software-cobranza-arrendadoras-mexico.html"
+    },
+    {
+      "source": "/recursos/software-arrendadoras-financieras",
+      "destination": "/recursos/software-arrendadoras-financieras.html"
+    },
+    {
+      "source": "/recursos/sistema-panaderia-recetas-inventario",
+      "destination": "/recursos/sistema-panaderia-recetas-inventario.html"
+    },
+    {
+      "source": "/recursos/software-poke-bar",
+      "destination": "/recursos/software-poke-bar.html"
+    },
+    {
+      "source": "/recursos/sistema-taller-bordado",
+      "destination": "/recursos/sistema-taller-bordado.html"
+    },
+    {
       "source": "/privacidad",
       "destination": "/privacidad.html"
     }

@@ -1935,6 +1935,47 @@ a {
   margin: -4px 0 0;
 }
 
+.resource-home {
+  background: #fff;
+  border-bottom: 1px solid #e2e7ef;
+  padding: 78px 0;
+}
+
+.resource-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resource-card {
+  background: #fff;
+  border: 1px solid #dfe5ee;
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  min-height: 100%;
+  padding: 24px;
+}
+
+.resource-card h3 {
+  font-size: 1.22rem;
+  line-height: 1.14;
+  margin: 0;
+}
+
+.resource-card p {
+  color: #4b5568;
+  line-height: 1.58;
+  margin: 0;
+}
+
+.resource-tag {
+  color: #07155f;
+  font-size: 0.76rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
 .packages-home {
   background: #fff;
   padding: 82px 0;
@@ -2370,6 +2411,7 @@ a {
   .benefit-row,
   .offer-band,
   .price-strip,
+  .resource-grid,
   .package-grid,
   .footer-main {
     grid-template-columns: repeat(2, 1fr);
@@ -2478,6 +2520,7 @@ a {
   }
 
   .sales-proof,
+  .resource-home,
   .packages-home {
     padding: 58px 0;
   }
@@ -2491,6 +2534,7 @@ a {
   }
 
   .benefit-row,
+  .resource-grid,
   .package-grid,
   .footer-main {
     grid-template-columns: 1fr;

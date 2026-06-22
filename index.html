@@ -13,7 +13,7 @@
     <link rel="canonical" href="https://janco.tech/">
     <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css?v=20260622">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -30,13 +30,14 @@
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header" data-open="false">
       <nav class="nav" aria-label="Navegación principal">
-        <a class="brand" href="index.html" aria-label="Janco inicio">
+        <a class="brand" href="/" aria-label="Janco inicio">
           <img class="brand-logo" src="assets/janco-logo.png" alt="Janco" width="665" height="260">
         </a>
         <div class="nav-links" id="menu-principal">
           <a href="#inicio">Inicio</a>
           <a href="#sistemas">Sistemas</a>
           <a href="#demo">Demo</a>
+          <a href="#recursos">Recursos</a>
           <a href="#paquetes">Paquetes</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#contacto">Contacto</a>
@@ -182,7 +183,7 @@
                   <span></span><span></span><span></span>
                 </div>
               </div>
-              <a class="learn-link" href="sistemas/panaderia.html">Ver sistema para panadería <span aria-hidden="true">→</span></a>
+              <a class="learn-link" href="sistemas/panaderia">Ver sistema para panadería <span aria-hidden="true">→</span></a>
             </article>
             <article class="showcase-card">
               <div class="showcase-title">
@@ -204,7 +205,7 @@
                   <span></span><span></span><span></span>
                 </div>
               </div>
-              <a class="learn-link" href="sistemas/restaurante.html">Ver software para poke bar <span aria-hidden="true">→</span></a>
+              <a class="learn-link" href="sistemas/restaurante">Ver software para poke bar <span aria-hidden="true">→</span></a>
             </article>
             <article class="showcase-card">
               <div class="showcase-title">
@@ -226,7 +227,7 @@
                   <span></span><span></span><span></span>
                 </div>
               </div>
-              <a class="learn-link" href="sistemas/bordadoras.html">Ver sistema para taller de bordado <span aria-hidden="true">→</span></a>
+              <a class="learn-link" href="sistemas/bordadoras">Ver sistema para taller de bordado <span aria-hidden="true">→</span></a>
             </article>
             <article class="showcase-card">
               <div class="showcase-title">
@@ -248,7 +249,49 @@
                   <span></span><span></span><span></span>
                 </div>
               </div>
-              <a class="learn-link" href="sistemas/a-medida.html">Conocer más <span aria-hidden="true">→</span></a>
+              <a class="learn-link" href="sistemas/a-medida">Conocer más <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="resource-home" id="recursos">
+        <div class="home-shell">
+          <div class="center-head">
+            <span class="section-kicker">Guías rápidas</span>
+            <h2>Busca por el problema que quieres resolver</h2>
+            <p>Páginas específicas para explicar cada operación con más detalle y ayudar a que Google entienda mejor qué vende Janco.</p>
+          </div>
+          <div class="resource-grid" aria-label="Recursos por tipo de sistema">
+            <article class="resource-card">
+              <span class="resource-tag">Arrendadoras</span>
+              <h3>Software de cobranza para arrendadoras en México</h3>
+              <p>Vencimientos, cartera, promesas de pago, contratos relacionados y reportes para dirección.</p>
+              <a class="learn-link" href="recursos/software-cobranza-arrendadoras-mexico">Leer guía <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="resource-card">
+              <span class="resource-tag">Leasing</span>
+              <h3>Software para arrendadoras financieras</h3>
+              <p>Clientes, contratos, activos, cobranza y seguimiento operativo para empresas de leasing.</p>
+              <a class="learn-link" href="recursos/software-arrendadoras-financieras">Leer guía <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="resource-card">
+              <span class="resource-tag">Panadería</span>
+              <h3>Sistema para panadería con recetas e inventario</h3>
+              <p>Ingredientes, recetas, costos, producción, merma, punto de venta, caja y reportes.</p>
+              <a class="learn-link" href="recursos/sistema-panaderia-recetas-inventario">Leer guía <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="resource-card">
+              <span class="resource-tag">Poke bar</span>
+              <h3>Software para poke bar</h3>
+              <p>Pedidos en barra, armado de bowls, ingredientes, toppings, POS, inventario y caja.</p>
+              <a class="learn-link" href="recursos/software-poke-bar">Leer guía <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="resource-card">
+              <span class="resource-tag">Bordado</span>
+              <h3>Sistema para taller de bordado</h3>
+              <p>Cotizaciones, pedidos, diseños, producción, inventario de hilos, pagos y entregas.</p>
+              <a class="learn-link" href="recursos/sistema-taller-bordado">Leer guía <span aria-hidden="true">→</span></a>
             </article>
           </div>
         </div>
@@ -448,17 +491,18 @@
           <a href="#inicio">Inicio</a>
           <a href="#sistemas">Sistemas</a>
           <a href="#demo">Demo</a>
+          <a href="#recursos">Recursos</a>
           <a href="#paquetes">Paquetes</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#contacto">Contacto</a>
         </nav>
         <nav aria-label="Sistemas">
           <strong>Sistemas</strong>
-          <a href="sistemas/arrendamiento-puro.html">Arrendamiento Puro</a>
-          <a href="sistemas/panaderia.html">Panadería</a>
-          <a href="sistemas/restaurante.html">Restaurante</a>
-          <a href="sistemas/bordadoras.html">Bordadoras</a>
-          <a href="sistemas/a-medida.html">Sistemas a la medida</a>
+          <a href="sistemas/arrendamiento-puro">Arrendamiento Puro</a>
+          <a href="sistemas/panaderia">Panadería</a>
+          <a href="sistemas/restaurante">Restaurante</a>
+          <a href="sistemas/bordadoras">Bordadoras</a>
+          <a href="sistemas/a-medida">Sistemas a la medida</a>
         </nav>
         <nav aria-label="Legal">
           <strong>Legal</strong>
