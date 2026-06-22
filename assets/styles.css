@@ -1044,7 +1044,13 @@ a {
 }
 
 .visual-proof-image-link {
+  cursor: zoom-in;
   display: block;
+}
+
+.visual-proof-image-link:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 4px;
 }
 
 .visual-proof-card img {
@@ -1062,6 +1068,166 @@ a {
   font-weight: 750;
   line-height: 1.45;
   margin-top: 12px;
+}
+
+.image-lightbox {
+  background: transparent;
+  border: 0;
+  height: fit-content;
+  max-height: min(92vh, 900px);
+  max-width: min(94vw, 1280px);
+  overflow: hidden;
+  padding: 0;
+  width: 94vw;
+  z-index: 100;
+}
+
+.image-lightbox::backdrop {
+  background: rgba(4, 8, 22, 0.72);
+}
+
+.image-lightbox-panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-rows: auto auto;
+  max-height: min(92vh, 900px);
+  overflow: hidden;
+}
+
+.image-lightbox-bar {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+.image-lightbox-bar p {
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.image-lightbox-actions {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.image-lightbox-download,
+.image-lightbox-close {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  color: var(--navy);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 950;
+  min-height: 40px;
+  padding: 0 12px;
+}
+
+.image-lightbox-close {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+.image-lightbox img {
+  align-self: start;
+  background: #fff;
+  height: auto;
+  justify-self: center;
+  max-height: 78vh;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 14px;
+  width: auto;
+}
+
+.brand-kit-hero {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  padding: 84px 24px 56px;
+}
+
+.brand-kit-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 28px;
+}
+
+.brand-asset-card {
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.brand-asset-preview {
+  align-items: center;
+  background:
+    linear-gradient(45deg, rgba(7, 21, 95, 0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(7, 21, 95, 0.05) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(7, 21, 95, 0.05) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(7, 21, 95, 0.05) 75%),
+    #fff;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  background-size: 16px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  min-height: 220px;
+  overflow: hidden;
+  padding: 18px;
+}
+
+.brand-asset-preview.cover {
+  min-height: 150px;
+}
+
+.brand-asset-preview img {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.brand-asset-preview.cover img {
+  max-height: 118px;
+}
+
+.brand-asset-card h2 {
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.brand-asset-card p {
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.brand-download-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .faq-section {
@@ -1240,7 +1406,8 @@ a {
 
   .systems-grid,
   .workflow,
-  .depth-grid {
+  .depth-grid,
+  .brand-kit-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1304,8 +1471,29 @@ a {
   .workflow,
   .module-grid,
   .visual-proof-grid,
-  .depth-grid {
+  .depth-grid,
+  .brand-kit-grid {
     grid-template-columns: 1fr;
+  }
+
+  .image-lightbox {
+    max-height: 94vh;
+    width: 96vw;
+  }
+
+  .image-lightbox-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .image-lightbox-actions {
+    width: 100%;
+  }
+
+  .image-lightbox-download,
+  .image-lightbox-close {
+    justify-content: center;
+    width: 100%;
   }
 
   .contact-grid,
@@ -1351,6 +1539,18 @@ a {
     bottom: auto;
     left: 0;
     position: relative;
+  }
+
+  .brand-kit-hero {
+    padding: 56px 18px 42px;
+  }
+
+  .brand-asset-preview {
+    min-height: 190px;
+  }
+
+  .brand-download-row .btn {
+    width: 100%;
   }
 
   .product-shell {

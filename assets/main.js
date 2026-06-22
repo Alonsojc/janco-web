@@ -71,3 +71,67 @@ if (demoForm) {
     }
   });
 }
+
+const lightboxLinks = document.querySelectorAll("[data-lightbox-image]");
+
+if (lightboxLinks.length > 0) {
+  const lightbox = document.createElement("dialog");
+  lightbox.className = "image-lightbox";
+  lightbox.setAttribute("aria-label", "Vista ampliada de captura");
+  lightbox.innerHTML = `
+    <div class="image-lightbox-panel">
+      <div class="image-lightbox-bar">
+        <p data-lightbox-caption></p>
+        <div class="image-lightbox-actions">
+          <a class="image-lightbox-download" href="#" download>Descargar</a>
+          <button class="image-lightbox-close" type="button" aria-label="Cerrar captura">Cerrar</button>
+        </div>
+      </div>
+      <img data-lightbox-preview src="" alt="">
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  const preview = lightbox.querySelector("[data-lightbox-preview]");
+  const caption = lightbox.querySelector("[data-lightbox-caption]");
+  const closeButton = lightbox.querySelector(".image-lightbox-close");
+  const downloadLink = lightbox.querySelector(".image-lightbox-download");
+
+  const closeLightbox = () => {
+    if (typeof lightbox.close === "function" && lightbox.open) {
+      lightbox.close();
+    }
+  };
+
+  lightboxLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (typeof lightbox.showModal !== "function") return;
+      event.preventDefault();
+
+      const image = link.querySelector("img");
+      const figure = link.closest("figure");
+      const figcaption = figure ? figure.querySelector("figcaption") : null;
+      const imageUrl = link.getAttribute("href");
+
+      preview.src = imageUrl;
+      preview.alt = image ? image.alt : "Captura ampliada";
+      caption.textContent = figcaption ? figcaption.textContent : "Captura ampliada";
+      downloadLink.href = imageUrl;
+      downloadLink.download = imageUrl.split("/").pop() || "captura-janco.png";
+
+      lightbox.showModal();
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  lightbox.addEventListener("close", () => {
+    preview.removeAttribute("src");
+  });
+}
