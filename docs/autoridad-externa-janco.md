@@ -112,4 +112,3 @@ Janco: https://janco.tech
 - Publicar 2 o 3 posts con capturas reales o anonimizadas.
 - Pedir a clientes o conocidos que compartan una publicacion inicial.
 - Mantener los READMEs de GitHub con enlaces a las paginas especificas.
-
