@@ -27,6 +27,10 @@
       "destination": "/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras.html"
     },
     {
+      "source": "/recursos/sistema-arrendamiento-puro",
+      "destination": "/recursos/sistema-arrendamiento-puro.html"
+    },
+    {
       "source": "/recursos/software-cobranza-arrendadoras-mexico",
       "destination": "/recursos/software-cobranza-arrendadoras-mexico.html"
     },
