@@ -17,6 +17,9 @@ Dominio principal: https://janco.tech
 
 - Software de cobranza para arrendadoras en Mexico: https://janco.tech/recursos/software-cobranza-arrendadoras-mexico
 - Software de arrendamiento puro en Mexico: https://janco.tech/recursos/software-arrendamiento-puro
+- Software para contratos de arrendamiento puro: https://janco.tech/recursos/software-contratos-arrendamiento-puro
+- Consulta de multas vehiculares para arrendadoras: https://janco.tech/recursos/consulta-multas-vehiculares-arrendadoras
+- Control de activos para arrendamiento puro: https://janco.tech/recursos/control-activos-arrendamiento-puro
 - Sistema para panaderia con recetas e inventario: https://janco.tech/recursos/sistema-panaderia-recetas-inventario
 - Software para poke bar: https://janco.tech/recursos/software-poke-bar
 - Sistema para taller de bordado: https://janco.tech/recursos/sistema-taller-bordado

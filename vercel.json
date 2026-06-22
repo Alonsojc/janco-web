@@ -39,6 +39,18 @@
       "destination": "/recursos/software-arrendadoras-financieras.html"
     },
     {
+      "source": "/recursos/software-contratos-arrendamiento-puro",
+      "destination": "/recursos/software-contratos-arrendamiento-puro.html"
+    },
+    {
+      "source": "/recursos/consulta-multas-vehiculares-arrendadoras",
+      "destination": "/recursos/consulta-multas-vehiculares-arrendadoras.html"
+    },
+    {
+      "source": "/recursos/control-activos-arrendamiento-puro",
+      "destination": "/recursos/control-activos-arrendamiento-puro.html"
+    },
+    {
       "source": "/recursos/sistema-panaderia-recetas-inventario",
       "destination": "/recursos/sistema-panaderia-recetas-inventario.html"
     },
