@@ -1012,6 +1012,53 @@ a {
   border-color: var(--navy);
 }
 
+.visual-proof-section {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  padding: 72px 24px;
+}
+
+#prueba-visual {
+  scroll-margin-top: 96px;
+}
+
+.visual-proof-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr);
+  margin-top: 30px;
+}
+
+.visual-proof-card {
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 0;
+  overflow: hidden;
+  padding: 14px;
+}
+
+.visual-proof-card-wide {
+  grid-column: 1 / -1;
+}
+
+.visual-proof-card img {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  height: auto;
+  width: 100%;
+}
+
+.visual-proof-card figcaption {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  font-weight: 750;
+  line-height: 1.45;
+  margin-top: 12px;
+}
+
 .faq-section {
   background: var(--paper-soft);
   padding: 70px 24px;
@@ -1251,6 +1298,7 @@ a {
   .proof-grid,
   .workflow,
   .module-grid,
+  .visual-proof-grid,
   .depth-grid {
     grid-template-columns: 1fr;
   }
@@ -2555,6 +2603,7 @@ a {
 
   .seo-strip,
   .seo-depth,
+  .visual-proof-section,
   .faq-section,
   .legal-content,
   .legal-hero {
