@@ -589,13 +589,6 @@ a {
   outline: 3px solid rgba(7, 21, 95, 0.12);
 }
 
-.contact-note {
-  color: var(--muted);
-  font-size: 0.86rem;
-  line-height: 1.55;
-  margin-top: 14px;
-}
-
 .site-footer {
   background: #fff;
   border-top: 1px solid var(--line);
@@ -2580,7 +2573,7 @@ a {
 .footer-main {
   display: grid;
   gap: 42px;
-  grid-template-columns: 1.35fr 0.7fr 0.9fr 0.9fr 0.9fr;
+  grid-template-columns: 1.35fr 0.7fr 0.9fr 0.9fr;
   padding: 45px 0 48px;
 }
 
@@ -2595,15 +2588,13 @@ a {
   max-width: 210px;
 }
 
-.home-footer nav,
-.socials {
+.home-footer nav {
   display: grid;
   gap: 12px;
   align-content: start;
 }
 
-.home-footer nav strong,
-.socials strong {
+.home-footer nav strong {
   color: #05070d;
   font-size: 0.95rem;
   margin-bottom: 8px;
@@ -2612,24 +2603,6 @@ a {
 .home-footer nav a {
   color: #374151;
   font-size: 0.9rem;
-}
-
-.socials div {
-  display: flex;
-  gap: 12px;
-}
-
-.socials a {
-  align-items: center;
-  background: #05070d;
-  border-radius: 999px;
-  color: #fff;
-  display: inline-flex;
-  font-size: 0.78rem;
-  font-weight: 900;
-  height: 34px;
-  justify-content: center;
-  width: 34px;
 }
 
 .footer-bottom {
