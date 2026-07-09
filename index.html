@@ -472,22 +472,40 @@
           <form class="contact-form" data-demo-form>
             <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-row">
-              <input name="nombre" placeholder="Nombre completo" autocomplete="name" required>
-              <input name="empresa" placeholder="Empresa" autocomplete="organization">
+              <div class="form-field">
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="empresa">Empresa</label>
+                <input id="empresa" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization">
+              </div>
             </div>
             <div class="form-row">
-              <input name="email" type="email" placeholder="Correo electrónico" autocomplete="email">
-              <input name="telefono" placeholder="Teléfono" autocomplete="tel">
+              <div class="form-field">
+                <label for="email">Correo electrónico</label>
+                <input id="email" name="email" type="email" placeholder="nombre@empresa.com" autocomplete="email">
+              </div>
+              <div class="form-field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" placeholder="+52 442 000 0000" autocomplete="tel">
+              </div>
             </div>
-            <select name="sistema" required>
-              <option value="">¿Qué sistema te interesa?</option>
-              <option>Arrendamiento puro</option>
-              <option>Panadería</option>
-              <option>Restaurante</option>
-              <option>Bordadoras</option>
-              <option>Sistema a la medida</option>
-            </select>
-            <textarea name="mensaje" placeholder="Cuéntanos sobre tu negocio y lo que necesitas"></textarea>
+            <div class="form-field">
+              <label for="sistema">Sistema de interés</label>
+              <select id="sistema" name="sistema" required>
+                <option value="">Selecciona un sistema</option>
+                <option>Arrendamiento puro</option>
+                <option>Panadería</option>
+                <option>Restaurante</option>
+                <option>Bordadoras</option>
+                <option>Sistema a la medida</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="mensaje">¿Qué necesitas resolver?</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente sobre tu negocio y lo que necesitas"></textarea>
+            </div>
             <label class="privacy-check">
               <input type="checkbox" name="privacidad" value="acepto" required>
               <span>Acepto el <a href="/privacidad">aviso de privacidad</a> y el uso de mis datos para recibir seguimiento comercial.</span>
