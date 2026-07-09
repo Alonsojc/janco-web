@@ -1,4 +1,5 @@
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const CONTACT_EMAIL = "ventas@janco.tech";
 
 function sendJson(res, statusCode, body) {
   res.statusCode = statusCode;
@@ -94,6 +95,7 @@ function autoReplyText(lead) {
     "",
     "Saludos,",
     "Janco",
+    CONTACT_EMAIL,
   ].join("\n");
 }
 
@@ -131,7 +133,7 @@ async function sendInternalEmail(lead) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return { skipped: true };
 
-  const to = process.env.LEADS_TO_EMAIL || "alonsojaneiro@hotmail.com";
+  const to = process.env.LEADS_TO_EMAIL || CONTACT_EMAIL;
   const from = process.env.LEADS_FROM_EMAIL || "Janco <onboarding@resend.dev>";
 
   return postResendEmail({
@@ -150,6 +152,7 @@ async function sendAutoReply(lead) {
 
   return postResendEmail({
     from,
+    replyTo: CONTACT_EMAIL,
     subject: "Recibimos tu solicitud en Janco",
     text: autoReplyText(lead),
     to: lead.email,
