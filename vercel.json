@@ -65,10 +65,6 @@
     {
       "source": "/privacidad",
       "destination": "/privacidad.html"
-    },
-    {
-      "source": "/marca",
-      "destination": "/marca.html"
     }
   ],
   "redirects": [
