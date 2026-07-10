@@ -2434,6 +2434,21 @@ a {
   width: 100%;
 }
 
+.contact-form .form-honeypot {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .contact-form textarea {
   min-height: 112px;
   resize: vertical;
