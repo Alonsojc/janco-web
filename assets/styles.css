@@ -2952,48 +2952,48 @@ a {
 
 @media (min-width: 821px) {
   :root {
-    --max: 1040px;
+    --max: 1015px;
   }
 
   html {
-    font-size: 14.1px;
+    font-size: 13.8px;
   }
 
   .home-shell {
-    max-width: 1040px;
+    max-width: 1015px;
   }
 
   .home-page .nav {
-    min-height: 69px;
+    min-height: 67px;
   }
 
   .home-page .brand-logo {
-    height: 51px;
+    height: 50px;
   }
 
   .home-page .btn {
-    min-height: 46px;
+    min-height: 45px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
   .home-hero {
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-bottom: 58px;
+    padding-top: 58px;
   }
 
   .mock-laptop {
-    width: min(545px, 100%);
+    width: min(533px, 100%);
   }
 
   .phone-mock {
-    transform: scale(0.88);
+    transform: scale(0.86);
     transform-origin: bottom right;
   }
 
   .home-section {
-    padding-bottom: 68px;
-    padding-top: 76px;
+    padding-bottom: 67px;
+    padding-top: 74px;
   }
 
   .showcase-card {
@@ -3002,8 +3002,8 @@ a {
 
   .sales-proof,
   .resource-home {
-    padding-bottom: 68px;
-    padding-top: 68px;
+    padding-bottom: 67px;
+    padding-top: 67px;
   }
 
   .resource-card {
