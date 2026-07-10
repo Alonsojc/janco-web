@@ -2434,6 +2434,21 @@ a {
   width: 100%;
 }
 
+.contact-form .form-honeypot {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .contact-form textarea {
   min-height: 112px;
   resize: vertical;
@@ -2932,5 +2947,66 @@ a {
     align-items: flex-start;
     flex-direction: column;
     gap: 12px;
+  }
+}
+
+@media (min-width: 821px) {
+  :root {
+    --max: 1015px;
+  }
+
+  html {
+    font-size: 13.8px;
+  }
+
+  .home-shell {
+    max-width: 1015px;
+  }
+
+  .home-page .nav {
+    min-height: 67px;
+  }
+
+  .home-page .brand-logo {
+    height: 50px;
+  }
+
+  .home-page .btn {
+    min-height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .home-hero {
+    padding-bottom: 58px;
+    padding-top: 58px;
+  }
+
+  .mock-laptop {
+    width: min(533px, 100%);
+  }
+
+  .phone-mock {
+    transform: scale(0.86);
+    transform-origin: bottom right;
+  }
+
+  .home-section {
+    padding-bottom: 67px;
+    padding-top: 74px;
+  }
+
+  .showcase-card {
+    padding: 28px;
+  }
+
+  .sales-proof,
+  .resource-home {
+    padding-bottom: 67px;
+    padding-top: 67px;
+  }
+
+  .resource-card {
+    padding: 20px;
   }
 }
