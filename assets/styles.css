@@ -2952,61 +2952,61 @@ a {
 
 @media (min-width: 821px) {
   :root {
-    --max: 1120px;
+    --max: 1080px;
   }
 
   html {
-    font-size: 15px;
+    font-size: 14.5px;
   }
 
   .home-shell {
-    max-width: 1120px;
+    max-width: 1080px;
   }
 
   .home-page .nav {
-    min-height: 74px;
+    min-height: 72px;
   }
 
   .home-page .brand-logo {
-    height: 54px;
+    height: 52px;
   }
 
   .home-page .btn {
-    min-height: 48px;
-    padding-left: 23px;
-    padding-right: 23px;
+    min-height: 46px;
+    padding-left: 21px;
+    padding-right: 21px;
   }
 
   .home-hero {
-    padding-bottom: 64px;
-    padding-top: 64px;
+    padding-bottom: 60px;
+    padding-top: 60px;
   }
 
   .mock-laptop {
-    width: min(580px, 100%);
+    width: min(560px, 100%);
   }
 
   .phone-mock {
-    transform: scale(0.94);
+    transform: scale(0.9);
     transform-origin: bottom right;
   }
 
   .home-section {
-    padding-bottom: 72px;
-    padding-top: 80px;
+    padding-bottom: 68px;
+    padding-top: 76px;
   }
 
   .showcase-card {
-    padding: 30px;
+    padding: 28px;
   }
 
   .sales-proof,
   .resource-home {
-    padding-bottom: 72px;
-    padding-top: 72px;
+    padding-bottom: 68px;
+    padding-top: 68px;
   }
 
   .resource-card {
-    padding: 22px;
+    padding: 20px;
   }
 }
