@@ -2952,29 +2952,29 @@ a {
 
 @media (min-width: 821px) {
   :root {
-    --max: 1080px;
+    --max: 1040px;
   }
 
   html {
-    font-size: 14.5px;
+    font-size: 14.1px;
   }
 
   .home-shell {
-    max-width: 1080px;
+    max-width: 1040px;
   }
 
   .home-page .nav {
-    min-height: 72px;
+    min-height: 69px;
   }
 
   .home-page .brand-logo {
-    height: 52px;
+    height: 51px;
   }
 
   .home-page .btn {
     min-height: 46px;
-    padding-left: 21px;
-    padding-right: 21px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .home-hero {
@@ -2983,11 +2983,11 @@ a {
   }
 
   .mock-laptop {
-    width: min(560px, 100%);
+    width: min(545px, 100%);
   }
 
   .phone-mock {
-    transform: scale(0.9);
+    transform: scale(0.88);
     transform-origin: bottom right;
   }
 
