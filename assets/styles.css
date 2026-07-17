@@ -884,6 +884,16 @@ a {
   margin-top: 9px;
 }
 
+.offer-prices .btn {
+  margin-top: 16px;
+}
+
+.offer-prices article:first-child strong,
+.price-strip-products strong {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  line-height: 1.12;
+}
+
 .seo-grid {
   align-items: start;
   display: grid;
