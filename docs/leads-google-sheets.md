@@ -18,6 +18,11 @@ En la hoja, abre `Extensiones > Apps Script` y pega este código:
 const SHEET_NAME = "Leads";
 const SECRET = "cambia-este-secreto";
 
+function safeCell(value) {
+  const text = String(value || "");
+  return /^[=+\-@]/.test(text) ? `'${text}` : text;
+}
+
 function doPost(e) {
   const secret = e.parameter.secret || "";
   if (secret !== SECRET) {
@@ -30,17 +35,17 @@ function doPost(e) {
   const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
 
   sheet.appendRow([
-    lead.fecha || new Date().toISOString(),
-    lead.nombre || "",
-    lead.empresa || "",
-    lead.email || "",
-    lead.telefono || "",
-    lead.sistema || "",
-    lead.mensaje || "",
-    lead.pagina || lead.origen || "",
-    lead.utm_source || "",
-    lead.utm_medium || "",
-    lead.utm_campaign || "",
+    safeCell(lead.fecha || new Date().toISOString()),
+    safeCell(lead.nombre),
+    safeCell(lead.empresa),
+    safeCell(lead.email),
+    safeCell(lead.telefono),
+    safeCell(lead.sistema),
+    safeCell(lead.mensaje),
+    safeCell(lead.pagina || lead.origen),
+    safeCell(lead.utm_source),
+    safeCell(lead.utm_medium),
+    safeCell(lead.utm_campaign),
   ]);
 
   return ContentService
@@ -61,7 +66,9 @@ En Apps Script:
 
 ## 4. Guardar la URL en Vercel
 
-Usa la URL con el secreto como query string:
+Usa un secreto aleatorio de al menos 32 caracteres y guarda la URL completa como un dato sensible. Apps Script recibe el secreto en el query string, por lo que no debes imprimir, compartir ni guardar esa URL en registros públicos. Si llega a exponerse, cambia `SECRET`, actualiza la variable en Vercel y vuelve a desplegar.
+
+Guarda la URL con el secreto como query string:
 
 ```bash
 printf '%s' 'https://script.google.com/macros/s/TU_ID/exec?secret=cambia-este-secreto' | npx vercel env add LEADS_WEBHOOK_URL production

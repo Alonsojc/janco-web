@@ -127,7 +127,13 @@ a {
 .nav-links a:focus-visible {
   border-color: var(--line);
   color: var(--navy);
-  outline: none;
+}
+
+.nav-links a:focus-visible,
+.btn:focus-visible,
+.menu-button:focus-visible {
+  outline: 3px solid #2f6fec;
+  outline-offset: 3px;
 }
 
 .nav-actions {
@@ -170,7 +176,6 @@ a {
 
 .btn:hover,
 .btn:focus-visible {
-  outline: none;
   transform: translateY(-1px);
 }
 
@@ -864,7 +869,7 @@ a {
 
 .offer-prices span,
 .price-strip span {
-  color: #6f7b92;
+  color: #5f6b80;
   display: block;
   font-size: 0.78rem;
   font-weight: 950;
@@ -2468,6 +2473,25 @@ a {
   width: 100%;
 }
 
+.contact-form input:focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible {
+  border-color: #2f6fec;
+  box-shadow: 0 0 0 3px rgba(47, 111, 236, 0.18);
+  outline: 2px solid transparent;
+}
+
+.contact-form input[aria-invalid="true"] {
+  border-color: #be123c;
+}
+
+.form-help {
+  color: #4b5568;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: -8px 0 0;
+}
+
 .contact-form .form-honeypot {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2572,7 +2596,7 @@ a {
   justify-content: center;
   position: fixed;
   right: 22px;
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, opacity 160ms ease, visibility 160ms ease;
   width: 58px;
   z-index: 25;
 }
@@ -2601,6 +2625,11 @@ a {
   background: #0f7f45;
   box-shadow: 0 22px 42px rgba(21, 150, 83, 0.34);
   transform: translateY(-2px);
+}
+
+.floating-whatsapp:focus-visible {
+  outline: 3px solid #2f6fec;
+  outline-offset: 3px;
 }
 
 .floating-whatsapp:hover::before,
@@ -2681,7 +2710,7 @@ a {
   width: 26px;
 }
 
-.cookie-consent {
+.privacy-preferences-panel {
   bottom: 22px;
   left: 50%;
   position: fixed;
@@ -2690,11 +2719,11 @@ a {
   z-index: 50;
 }
 
-.cookie-consent[hidden] {
+.privacy-preferences-panel[hidden] {
   display: none;
 }
 
-.cookie-consent-card {
+.privacy-preferences-card {
   align-items: center;
   background: #fff;
   border: 1px solid var(--line-strong);
@@ -2705,45 +2734,45 @@ a {
   padding: 22px;
 }
 
-.cookie-consent-copy {
+.privacy-preferences-copy {
   max-width: 590px;
 }
 
-.cookie-consent-copy strong {
+.privacy-preferences-copy strong {
   color: var(--navy);
   display: block;
   font-size: 1.05rem;
   margin-bottom: 6px;
 }
 
-.cookie-consent-copy p {
+.privacy-preferences-copy p {
   color: var(--ink-soft);
   font-size: 0.92rem;
   line-height: 1.55;
   margin: 0;
 }
 
-.cookie-consent-copy a {
+.privacy-preferences-copy a {
   color: var(--navy);
   font-weight: 750;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.cookie-consent-copy [data-cookie-consent-status] {
+.privacy-preferences-copy [data-cookie-consent-status] {
   color: var(--muted);
   display: block;
   font-size: 0.8rem;
   margin-top: 7px;
 }
 
-.cookie-consent-actions {
+.privacy-preferences-actions {
   display: flex;
   flex: 0 0 auto;
   gap: 9px;
 }
 
-.cookie-settings-button {
+.privacy-settings-button {
   background: #fff;
   border: 1px solid var(--line-strong);
   bottom: 18px;
@@ -2755,14 +2784,23 @@ a {
   left: 18px;
   padding: 9px 11px;
   position: fixed;
+  transition: opacity 160ms ease, visibility 160ms ease, transform 160ms ease;
   z-index: 30;
 }
 
-.cookie-settings-button:hover,
-.cookie-settings-button:focus-visible {
+.privacy-settings-button:hover,
+.privacy-settings-button:focus-visible {
   border-color: var(--navy);
   outline: 3px solid rgba(7, 21, 95, 0.18);
   outline-offset: 2px;
+}
+
+.article-meta {
+  color: #4b5568;
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.45;
+  margin: 12px 0 0;
 }
 
 @media (max-width: 1060px) {
@@ -2877,7 +2915,7 @@ a {
   }
 
   .floating-whatsapp {
-    bottom: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
     height: 52px;
     right: 16px;
     width: 52px;
@@ -2892,26 +2930,34 @@ a {
     width: 28px;
   }
 
-  .cookie-consent {
+  .privacy-preferences-panel {
     bottom: 12px;
     width: calc(100% - 24px);
   }
 
-  .cookie-consent-card {
+  .privacy-preferences-card {
     align-items: stretch;
     flex-direction: column;
     gap: 18px;
     padding: 20px;
   }
 
-  .cookie-consent-actions {
+  .privacy-preferences-actions {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .cookie-settings-button {
-    bottom: 16px;
+  .privacy-settings-button {
+    bottom: calc(16px + env(safe-area-inset-bottom));
     left: 12px;
+  }
+
+  .contact-form-visible .floating-whatsapp,
+  .contact-form-visible .privacy-settings-button {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    visibility: hidden;
   }
 
   .home-section {

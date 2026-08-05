@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aviso de privacidad | Janco</title>
     <meta name="description" content="Aviso de privacidad de Janco para el uso de datos enviados por formularios de contacto y solicitudes de demo.">
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="noindex,follow">
     <meta property="og:title" content="Aviso de privacidad | Janco">
     <meta property="og:description" content="Conoce cómo Janco usa los datos enviados por formularios de contacto y solicitudes de demo.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://janco.tech/privacidad">
+    <meta property="og:site_name" content="Janco">
+    <meta property="og:locale" content="es_MX">
     <meta property="og:image" content="https://janco.tech/assets/janco-social-card.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -20,15 +23,36 @@
     <meta name="twitter:image" content="https://janco.tech/assets/janco-social-card.png">
     <meta name="twitter:image:alt" content="Janco: software para operar negocios reales">
     <link rel="canonical" href="https://janco.tech/privacidad">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="assets/styles.css?v=20260622b">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/assets/styles.css?v=20260805b">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://janco.tech/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Aviso de privacidad",
+            "item": "https://janco.tech/privacidad"
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="legal-page">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header" data-open="false">
       <nav class="nav" aria-label="Navegación principal">
         <a class="brand" href="/" aria-label="Janco inicio">
-          <img class="brand-logo" src="assets/janco-logo.png" alt="Janco" width="665" height="260">
+          <img class="brand-logo" src="/assets/janco-logo-333.webp" alt="Janco" width="333" height="130">
         </a>
         <div class="nav-links" id="menu-principal">
           <a href="/#sistemas">Sistemas</a>
@@ -53,7 +77,7 @@
         <div class="container">
           <span class="section-kicker">Legal</span>
           <h1>Aviso de privacidad</h1>
-          <p>Última actualización: 9 de julio de 2026.</p>
+          <p>Última actualización: 5 de agosto de 2026.</p>
         </div>
       </section>
 
@@ -73,7 +97,7 @@
             <p>Podemos usar proveedores tecnológicos para operar el sitio, recibir formularios, enviar correos, medir tráfico y guardar leads. Estos proveedores tratan la información solo para prestar esos servicios.</p>
 
             <h2>Medición y cookies</h2>
-            <p>Vercel Web Analytics nos ayuda a consultar estadísticas agregadas del sitio. Google Analytics 4 solo se activa cuando aceptas las cookies de medición y nos permite entender acciones como consultar un sistema, hacer clic en WhatsApp o solicitar una demo. La medición comercial puede conservar la fuente, el medio y la campaña UTM durante la sesión. No enviamos a estas herramientas el nombre, correo, teléfono ni el texto escrito en el formulario.</p>
+            <p>Vercel Web Analytics y Speed Insights nos ayudan a consultar estadísticas agregadas de navegación y rendimiento del sitio. Google Analytics 4 solo se activa cuando aceptas las cookies de medición y nos permite entender acciones como consultar un sistema, hacer clic en WhatsApp o solicitar una demo. La medición comercial puede conservar la fuente, el medio y la campaña UTM durante la sesión. No enviamos a estas herramientas el nombre, correo, teléfono ni el texto escrito en el formulario.</p>
             <p>Puedes aceptar, rechazar o cambiar tu elección en cualquier momento mediante el botón “Preferencias de cookies”. Rechazar la medición no limita el formulario ni las funciones del sitio. Los permisos de publicidad, personalización y envío de datos de usuario para anuncios permanecen desactivados.</p>
 
             <h2>Derechos ARCO</h2>
@@ -98,7 +122,7 @@
     <footer class="site-footer">
       <div class="footer-grid">
         <a class="brand" href="/" aria-label="Janco inicio">
-          <img class="brand-logo" src="assets/janco-logo.png" alt="Janco" width="665" height="260">
+          <img class="brand-logo" src="/assets/janco-logo-333.webp" alt="Janco" width="333" height="130">
         </a>
         <div class="footer-links">
           <a href="/#sistemas">Sistemas</a>
@@ -114,10 +138,8 @@
       </svg>
       <span class="visually-hidden">Enviar WhatsApp a Janco</span>
     </a>
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
+    <script defer src="/assets/main.js?v=20260805b"></script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <script src="assets/main.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
   </body>
 </html>
