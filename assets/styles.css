@@ -127,7 +127,13 @@ a {
 .nav-links a:focus-visible {
   border-color: var(--line);
   color: var(--navy);
-  outline: none;
+}
+
+.nav-links a:focus-visible,
+.btn:focus-visible,
+.menu-button:focus-visible {
+  outline: 3px solid #2f6fec;
+  outline-offset: 3px;
 }
 
 .nav-actions {
@@ -170,7 +176,6 @@ a {
 
 .btn:hover,
 .btn:focus-visible {
-  outline: none;
   transform: translateY(-1px);
 }
 
@@ -864,7 +869,7 @@ a {
 
 .offer-prices span,
 .price-strip span {
-  color: #6f7b92;
+  color: #5f6b80;
   display: block;
   font-size: 0.78rem;
   font-weight: 950;
@@ -2468,6 +2473,25 @@ a {
   width: 100%;
 }
 
+.contact-form input:focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible {
+  border-color: #2f6fec;
+  box-shadow: 0 0 0 3px rgba(47, 111, 236, 0.18);
+  outline: 2px solid transparent;
+}
+
+.contact-form input[aria-invalid="true"] {
+  border-color: #be123c;
+}
+
+.form-help {
+  color: #4b5568;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: -8px 0 0;
+}
+
 .contact-form .form-honeypot {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2572,7 +2596,7 @@ a {
   justify-content: center;
   position: fixed;
   right: 22px;
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, opacity 160ms ease, visibility 160ms ease;
   width: 58px;
   z-index: 25;
 }
@@ -2601,6 +2625,11 @@ a {
   background: #0f7f45;
   box-shadow: 0 22px 42px rgba(21, 150, 83, 0.34);
   transform: translateY(-2px);
+}
+
+.floating-whatsapp:focus-visible {
+  outline: 3px solid #2f6fec;
+  outline-offset: 3px;
 }
 
 .floating-whatsapp:hover::before,
@@ -2755,6 +2784,7 @@ a {
   left: 18px;
   padding: 9px 11px;
   position: fixed;
+  transition: opacity 160ms ease, visibility 160ms ease, transform 160ms ease;
   z-index: 30;
 }
 
@@ -2763,6 +2793,14 @@ a {
   border-color: var(--navy);
   outline: 3px solid rgba(7, 21, 95, 0.18);
   outline-offset: 2px;
+}
+
+.article-meta {
+  color: #4b5568;
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.45;
+  margin: 12px 0 0;
 }
 
 @media (max-width: 1060px) {
@@ -2877,7 +2915,7 @@ a {
   }
 
   .floating-whatsapp {
-    bottom: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
     height: 52px;
     right: 16px;
     width: 52px;
@@ -2910,8 +2948,16 @@ a {
   }
 
   .cookie-settings-button {
-    bottom: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
     left: 12px;
+  }
+
+  .contact-form-visible .floating-whatsapp,
+  .contact-form-visible .cookie-settings-button {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    visibility: hidden;
   }
 
   .home-section {

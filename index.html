@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Janco | Software para arrendamiento, panaderías, restaurantes y bordadoras</title>
-    <meta name="description" content="Janco desarrolla software para operar arrendamiento puro, panaderías, restaurantes tipo barra, bordadoras y sistemas a la medida en México: ventas, inventario, cobranza, producción, caja y reportes.">
+    <title>Janco | Software para operar negocios en México</title>
+    <meta name="description" content="Software Janco para arrendamiento puro, panaderías, poke bars y talleres de bordado: ventas, inventario, cobranza y reportes.">
     <meta name="robots" content="index,follow">
     <meta property="og:title" content="Janco | Software para operar negocios reales">
     <meta property="og:description" content="Sistemas Janco para arrendamiento puro, panadería, restaurante, bordadoras y desarrollos a la medida.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://janco.tech/">
+    <meta property="og:site_name" content="Janco">
+    <meta property="og:locale" content="es_MX">
     <meta property="og:image" content="https://janco.tech/assets/janco-social-card.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -20,22 +23,48 @@
     <meta name="twitter:image" content="https://janco.tech/assets/janco-social-card.png">
     <meta name="twitter:image:alt" content="Janco: software para operar negocios reales">
     <link rel="canonical" href="https://janco.tech/">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="assets/styles.css?v=20260709e">
+    <link rel="stylesheet" href="/assets/styles.css?v=20260805a">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Janco",
-        "url": "https://janco.tech/",
-        "logo": "https://janco.tech/assets/janco-logo.png",
-        "sameAs": [
-          "https://github.com/Alonsojc/janco-web"
-        ],
-        "email": "ventas@janco.tech",
-        "telephone": "+52 442 272 0445",
-        "description": "Empresa de software para operación de negocios: arrendamiento puro, panaderías, restaurantes, bordadoras y sistemas a la medida."
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://janco.tech/#organization",
+            "name": "Janco",
+            "url": "https://janco.tech/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://janco.tech/assets/janco-logo.png",
+              "width": 665,
+              "height": 260
+            },
+            "email": "ventas@janco.tech",
+            "telephone": "+52 442 272 0445",
+            "description": "Empresa de software para operación de negocios: arrendamiento puro, panaderías, restaurantes, bordadoras y sistemas a la medida."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://janco.tech/#website",
+            "url": "https://janco.tech/",
+            "name": "Janco",
+            "inLanguage": "es-MX",
+            "publisher": { "@id": "https://janco.tech/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://janco.tech/#webpage",
+            "url": "https://janco.tech/",
+            "name": "Janco | Software para operar negocios en México",
+            "description": "Software para arrendamiento puro, panaderías, poke bars, talleres de bordado y sistemas a la medida.",
+            "inLanguage": "es-MX",
+            "isPartOf": { "@id": "https://janco.tech/#website" },
+            "about": { "@id": "https://janco.tech/#organization" }
+          }
+        ]
       }
     </script>
   </head>
@@ -44,7 +73,7 @@
     <header class="site-header" data-open="false">
       <nav class="nav" aria-label="Navegación principal">
         <a class="brand" href="/" aria-label="Janco inicio">
-          <img class="brand-logo" src="assets/janco-logo.png" alt="Janco" width="665" height="260">
+          <img class="brand-logo" src="/assets/janco-logo-333.webp" alt="Janco" width="333" height="130">
         </a>
         <div class="nav-links" id="menu-principal">
           <a href="#inicio">Inicio</a>
@@ -93,7 +122,7 @@
               <span><svg viewBox="0 0 24 24" fill="none"><path d="m7 12 3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Soporte cercano</span>
             </div>
           </div>
-          <div class="hero-device" aria-label="Vista de dashboard Janco">
+          <div class="hero-device" role="img" aria-label="Vista ilustrativa de un dashboard Janco">
             <div class="mock-laptop">
               <div class="screen">
                 <aside>
@@ -141,7 +170,7 @@
               <p>Mes actual <span>$1,245,800</span></p>
               <p>Por cobrar <span>$980,200</span></p>
               <small>Vencimientos próximos</small>
-              <button>Ver todos</button>
+              <button type="button" tabindex="-1" aria-hidden="true">Ver todos</button>
             </div>
           </div>
         </div>
@@ -272,33 +301,33 @@
         <div class="home-shell">
           <div class="center-head">
             <span class="section-kicker">Conoce las soluciones</span>
-            <h2>Una guía por cada sistema Janco</h2>
-            <p>Explora qué resuelve cada sistema y elige el que corresponde a tu operación.</p>
+            <h2>Guías para evaluar cada tipo de software</h2>
+            <p>Explora qué debe resolver cada sistema antes de elegir una solución para tu operación.</p>
           </div>
           <div class="resource-grid" aria-label="Recursos por tipo de sistema">
             <article class="resource-card">
               <span class="resource-tag">Arrendamiento puro</span>
-              <h3>Software para arrendamiento puro</h3>
+              <h3>Cómo elegir software para arrendamiento puro</h3>
               <p>Contratos, anexos, activos, cobranza, facturación, multas y reportes en una sola operación.</p>
-              <a class="learn-link" href="sistemas/arrendamiento-puro">Ver sistema <span aria-hidden="true">→</span></a>
+              <a class="learn-link" href="recursos/software-arrendamiento-puro">Leer guía <span aria-hidden="true">→</span></a>
             </article>
             <article class="resource-card">
               <span class="resource-tag">Panadería</span>
-              <h3>Software para panaderías</h3>
+              <h3>Cómo controlar recetas e inventario</h3>
               <p>Recetas, costos, producción, inventario, merma, punto de venta y reportes.</p>
-              <a class="learn-link" href="sistemas/panaderia">Ver sistema <span aria-hidden="true">→</span></a>
+              <a class="learn-link" href="recursos/sistema-panaderia-recetas-inventario">Leer guía <span aria-hidden="true">→</span></a>
             </article>
             <article class="resource-card">
               <span class="resource-tag">Restaurante</span>
-              <h3>Software para restaurantes tipo barra</h3>
+              <h3>Cómo controlar un poke bar</h3>
               <p>Pedidos en barra, armado de bowls, ingredientes, toppings, POS, inventario y caja.</p>
-              <a class="learn-link" href="sistemas/restaurante">Ver sistema <span aria-hidden="true">→</span></a>
+              <a class="learn-link" href="recursos/software-poke-bar">Leer guía <span aria-hidden="true">→</span></a>
             </article>
             <article class="resource-card">
               <span class="resource-tag">Bordadoras</span>
-              <h3>Software para talleres de bordado</h3>
+              <h3>Cómo ordenar pedidos y producción</h3>
               <p>Cotizaciones, pedidos, diseños, producción, inventario de hilos, pagos y entregas.</p>
-              <a class="learn-link" href="sistemas/bordadoras">Ver sistema <span aria-hidden="true">→</span></a>
+              <a class="learn-link" href="recursos/sistema-taller-bordado">Leer guía <span aria-hidden="true">→</span></a>
             </article>
             <article class="resource-card">
               <span class="resource-tag">A la medida</span>
@@ -307,6 +336,14 @@
               <a class="learn-link" href="sistemas/a-medida">Conocer la solución <span aria-hidden="true">→</span></a>
             </article>
           </div>
+          <nav class="depth-links" aria-label="Más guías para arrendadoras">
+            <span>Más para arrendadoras:</span>
+            <a href="recursos/sistema-arrendamiento-puro">Qué es un sistema de arrendamiento puro</a>
+            <a href="recursos/software-cobranza-arrendadoras-mexico">Cobranza</a>
+            <a href="recursos/software-contratos-arrendamiento-puro">Contratos</a>
+            <a href="recursos/control-activos-arrendamiento-puro">Control de activos</a>
+            <a href="recursos/consulta-multas-vehiculares-arrendadoras">Multas vehiculares</a>
+          </nav>
         </div>
       </section>
 
@@ -463,23 +500,24 @@
             <div class="form-row">
               <div class="form-field">
                 <label for="nombre">Nombre completo</label>
-                <input id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="name" required>
+                <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre" autocomplete="name" required>
               </div>
               <div class="form-field">
                 <label for="empresa">Empresa</label>
-                <input id="empresa" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization">
+                <input id="empresa" name="empresa" type="text" placeholder="Nombre de tu empresa" autocomplete="organization">
               </div>
             </div>
             <div class="form-row">
               <div class="form-field">
                 <label for="email">Correo electrónico</label>
-                <input id="email" name="email" type="email" placeholder="nombre@empresa.com" autocomplete="email">
+                <input id="email" name="email" type="email" placeholder="nombre@empresa.com" autocomplete="email" aria-describedby="contacto-ayuda">
               </div>
               <div class="form-field">
                 <label for="telefono">Teléfono</label>
-                <input id="telefono" name="telefono" type="tel" placeholder="+52 442 000 0000" autocomplete="tel">
+                <input id="telefono" name="telefono" type="tel" placeholder="+52 442 000 0000" autocomplete="tel" aria-describedby="contacto-ayuda">
               </div>
             </div>
+            <p class="form-help" id="contacto-ayuda">Déjanos al menos un correo o teléfono para poder contactarte.</p>
             <div class="form-field">
               <label for="sistema">Sistema de interés</label>
               <select id="sistema" name="sistema" required>
@@ -514,7 +552,7 @@
     <footer class="site-footer home-footer">
       <div class="home-shell footer-main">
         <div class="footer-brand">
-          <img class="brand-logo" src="assets/janco-logo.png" alt="Janco" width="665" height="260">
+          <img class="brand-logo" src="/assets/janco-logo-333.webp" alt="Janco" width="333" height="130">
           <p>Software para operar negocios reales.</p>
         </div>
         <nav aria-label="Enlaces de pie">
@@ -554,10 +592,8 @@
       </svg>
       <span class="visually-hidden">Enviar WhatsApp a Janco</span>
     </a>
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
+    <script defer src="/assets/main.js?v=20260805a"></script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <script src="assets/main.js?v=20260709a"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
   </body>
 </html>

@@ -5,6 +5,12 @@ const ANALYTICS_GRANTED = "granted";
 const ANALYTICS_DENIED = "denied";
 const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
 
+window.va = window.va || function vercelAnalytics() {
+  (window.vaq = window.vaq || []).push(arguments);
+};
+window.si = window.si || function vercelSpeedInsights() {
+  (window.siq = window.siq || []).push(arguments);
+};
 window.dataLayer = window.dataLayer || [];
 window.gtag = window.gtag || function gtag() {
   window.dataLayer.push(arguments);
@@ -38,19 +44,37 @@ const readStoredConsent = () => {
 
 let analyticsConsent = readStoredConsent();
 let googleTagLoaded = false;
+let systemViewTracked = false;
+
+const getAnalyticsPageLocation = () => {
+  const page = new URL(window.location.href);
+  const allowedParameters = new URLSearchParams();
+  UTM_KEYS.forEach((key) => {
+    const value = page.searchParams.get(key);
+    if (value) allowedParameters.set(key, value.slice(0, 100));
+  });
+  page.search = allowedParameters.toString();
+  page.hash = "";
+  return page.href;
+};
 
 const loadGoogleTag = () => {
   if (googleTagLoaded || document.querySelector("script[data-google-analytics]")) return;
   googleTagLoaded = true;
 
   window.gtag("js", new Date());
-  window.gtag("config", GA_MEASUREMENT_ID);
+  window.gtag("config", GA_MEASUREMENT_ID, {
+    allow_ad_personalization_signals: false,
+    allow_google_signals: false,
+    page_location: getAnalyticsPageLocation(),
+  });
 
   const googleTag = document.createElement("script");
   googleTag.async = true;
   googleTag.dataset.googleAnalytics = "true";
   googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
   document.head.appendChild(googleTag);
+  trackSystemViewOnce();
 };
 
 const clearGoogleAnalyticsCookies = () => {
@@ -127,12 +151,6 @@ const captureAttribution = () => {
 
 captureAttribution();
 
-if (analyticsConsent) {
-  applyAnalyticsConsent(analyticsConsent, { persist: false });
-} else {
-  clearGoogleAnalyticsCookies();
-}
-
 const getCampaignParameters = () => {
   const campaign = readStoredAttribution();
   return {
@@ -151,6 +169,14 @@ const trackEvent = (eventName, parameters = {}) => {
   });
 };
 
+const trackSystemViewOnce = () => {
+  if (systemViewTracked) return;
+  const match = window.location.pathname.match(/^\/sistemas\/([^/]+)\/?$/);
+  if (!match) return;
+  trackEvent("view_system", { system_name: match[1].replace(/-/g, "_") });
+  systemViewTracked = true;
+};
+
 const getLinkLocation = (link) => {
   if (link.classList.contains("floating-whatsapp")) return "floating_whatsapp";
   const section = link.closest("header, section, footer");
@@ -163,6 +189,12 @@ window.jancoAnalytics = {
   hasConsent: () => analyticsConsent === ANALYTICS_GRANTED,
   track: trackEvent,
 };
+
+if (analyticsConsent) {
+  applyAnalyticsConsent(analyticsConsent, { persist: false });
+} else {
+  clearGoogleAnalyticsCookies();
+}
 
 const cookieConsent = document.createElement("section");
 cookieConsent.className = "cookie-consent";
@@ -188,6 +220,7 @@ cookieSettingsButton.className = "cookie-settings-button";
 cookieSettingsButton.type = "button";
 cookieSettingsButton.textContent = "Preferencias de cookies";
 cookieSettingsButton.setAttribute("aria-controls", "cookie-consent-panel");
+cookieSettingsButton.setAttribute("aria-expanded", "false");
 cookieConsent.id = "cookie-consent-panel";
 
 document.body.append(cookieConsent, cookieSettingsButton);
@@ -201,6 +234,7 @@ const updateCookieStatus = () => {
 };
 const closeCookieConsent = () => {
   cookieConsent.hidden = true;
+  cookieSettingsButton.setAttribute("aria-expanded", "false");
   cookieSettingsButton.focus();
 };
 
@@ -219,6 +253,7 @@ cookieConsent.querySelector("[data-cookie-reject]").addEventListener("click", ()
 cookieSettingsButton.addEventListener("click", () => {
   updateCookieStatus();
   cookieConsent.hidden = false;
+  cookieSettingsButton.setAttribute("aria-expanded", "true");
   cookieConsent.querySelector("[data-cookie-accept]").focus();
 });
 
@@ -229,15 +264,16 @@ document.addEventListener("click", (event) => {
   if (!link) return;
 
   const href = link.getAttribute("href") || "";
-  const label = (link.textContent || link.getAttribute("aria-label") || "").trim().toLowerCase();
   const linkLocation = getLinkLocation(link);
 
   if (href.includes("wa.me/")) {
     trackEvent("click_whatsapp", { link_location: linkLocation });
   }
 
-  if (label.includes("agendar demo")) {
-    trackEvent("click_demo", { link_location: linkLocation });
+  const analyticsEvent = link.dataset.analyticsEvent
+    || (link.matches('.btn[href$="#contacto"]') ? "click_demo" : "");
+  if (analyticsEvent) {
+    trackEvent(analyticsEvent, { link_location: link.dataset.analyticsLocation || linkLocation });
   }
 });
 
@@ -246,11 +282,6 @@ document.addEventListener("change", (event) => {
     trackEvent("select_system", { system_name: event.target.value });
   }
 });
-
-const systemPath = window.location.pathname.match(/^\/sistemas\/([^/]+)\/?$/);
-if (systemPath) {
-  trackEvent("view_system", { system_name: systemPath[1].replace(/-/g, "_") });
-}
 
 const header = document.querySelector(".site-header");
 const menuButton = document.querySelector("[data-menu-button]");
@@ -279,14 +310,45 @@ if (header && menuButton) {
 }
 
 if (demoForm) {
+  const emailInput = demoForm.querySelector('[name="email"]');
+  const phoneInput = demoForm.querySelector('[name="telefono"]');
   const setFormStatus = (state, message) => {
     if (!formStatus) return;
     formStatus.dataset.state = state;
     formStatus.textContent = message;
   };
 
+  const clearContactValidation = () => {
+    if (emailInput) {
+      emailInput.setCustomValidity("");
+      emailInput.removeAttribute("aria-invalid");
+    }
+    if (phoneInput) phoneInput.removeAttribute("aria-invalid");
+  };
+
+  [emailInput, phoneInput].filter(Boolean).forEach((input) => {
+    input.addEventListener("input", clearContactValidation);
+    input.addEventListener("invalid", () => input.setAttribute("aria-invalid", "true"));
+  });
+
   demoForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const hasContact = Boolean(emailInput?.value.trim() || phoneInput?.value.trim());
+    if (!hasContact) {
+      const message = "Déjanos al menos un correo o teléfono para poder contactarte.";
+      if (emailInput) {
+        emailInput.setCustomValidity(message);
+        emailInput.setAttribute("aria-invalid", "true");
+      }
+      if (phoneInput) phoneInput.setAttribute("aria-invalid", "true");
+      setFormStatus("error", message);
+      trackEvent("form_validation_error", { error_type: "missing_contact" });
+      emailInput?.focus();
+      emailInput?.reportValidity();
+      return;
+    }
+    clearContactValidation();
+
     const data = new FormData(demoForm);
     const payload = Object.fromEntries(data.entries());
     const storedAttribution = window.jancoAnalytics.getAttribution();
@@ -328,6 +390,14 @@ if (demoForm) {
   });
 }
 
+if (demoForm && "IntersectionObserver" in window) {
+  const formObserver = new IntersectionObserver(
+    ([entry]) => document.body.classList.toggle("contact-form-visible", entry.isIntersecting),
+    { threshold: 0.12 },
+  );
+  formObserver.observe(demoForm);
+}
+
 const lightboxLinks = document.querySelectorAll("[data-lightbox-image]");
 
 if (lightboxLinks.length > 0) {
@@ -367,13 +437,14 @@ if (lightboxLinks.length > 0) {
       const image = link.querySelector("img");
       const figure = link.closest("figure");
       const figcaption = figure ? figure.querySelector("figcaption") : null;
-      const imageUrl = link.getAttribute("href");
+      const imageUrl = new URL(link.getAttribute("href"), window.location.href);
+      if (imageUrl.origin !== window.location.origin || !imageUrl.pathname.startsWith("/assets/proof/")) return;
 
-      preview.src = imageUrl;
+      preview.src = imageUrl.href;
       preview.alt = image ? image.alt : "Captura ampliada";
       caption.textContent = figcaption ? figcaption.textContent : "Captura ampliada";
-      downloadLink.href = imageUrl;
-      downloadLink.download = imageUrl.split("/").pop() || "captura-janco.png";
+      downloadLink.href = imageUrl.href;
+      downloadLink.download = imageUrl.pathname.split("/").pop() || "captura-janco.png";
 
       lightbox.showModal();
     });
