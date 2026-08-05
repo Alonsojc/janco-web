@@ -442,7 +442,9 @@ if (lightboxLinks.length > 0) {
 
       preview.src = imageUrl.href;
       preview.alt = image ? image.alt : "Captura ampliada";
-      caption.textContent = figcaption ? figcaption.textContent : "Captura ampliada";
+      caption.textContent = figcaption
+        ? figcaption.innerText.replace(/\s+/g, " ").trim()
+        : "Captura ampliada";
       downloadLink.href = imageUrl.href;
       downloadLink.download = imageUrl.pathname.split("/").pop() || "captura-janco.png";
 
