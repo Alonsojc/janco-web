@@ -197,18 +197,18 @@ if (analyticsConsent) {
 }
 
 const cookieConsent = document.createElement("section");
-cookieConsent.className = "cookie-consent";
+cookieConsent.className = "privacy-preferences-panel";
 cookieConsent.hidden = Boolean(analyticsConsent);
 cookieConsent.setAttribute("role", "dialog");
-cookieConsent.setAttribute("aria-labelledby", "cookie-consent-title");
+cookieConsent.setAttribute("aria-labelledby", "privacy-preferences-title");
 cookieConsent.innerHTML = `
-  <div class="cookie-consent-card">
-    <div class="cookie-consent-copy">
-      <strong id="cookie-consent-title">Tu privacidad</strong>
+  <div class="privacy-preferences-card">
+    <div class="privacy-preferences-copy">
+      <strong id="privacy-preferences-title">Tu privacidad</strong>
       <p>Usamos cookies de medición de Google Analytics para entender qué sistemas interesan y mejorar el sitio. Puedes aceptar o rechazar; el sitio funciona igual. <a href="/privacidad">Consulta el aviso de privacidad</a>.</p>
       <span data-cookie-consent-status aria-live="polite"></span>
     </div>
-    <div class="cookie-consent-actions">
+    <div class="privacy-preferences-actions">
       <button class="btn btn-secondary" type="button" data-cookie-reject>Rechazar</button>
       <button class="btn btn-primary" type="button" data-cookie-accept>Aceptar medición</button>
     </div>
@@ -216,12 +216,12 @@ cookieConsent.innerHTML = `
 `;
 
 const cookieSettingsButton = document.createElement("button");
-cookieSettingsButton.className = "cookie-settings-button";
+cookieSettingsButton.className = "privacy-settings-button";
 cookieSettingsButton.type = "button";
 cookieSettingsButton.textContent = "Preferencias de cookies";
-cookieSettingsButton.setAttribute("aria-controls", "cookie-consent-panel");
+cookieSettingsButton.setAttribute("aria-controls", "privacy-preferences-panel");
 cookieSettingsButton.setAttribute("aria-expanded", "false");
-cookieConsent.id = "cookie-consent-panel";
+cookieConsent.id = "privacy-preferences-panel";
 
 document.body.append(cookieConsent, cookieSettingsButton);
 

@@ -2710,7 +2710,7 @@ a {
   width: 26px;
 }
 
-.cookie-consent {
+.privacy-preferences-panel {
   bottom: 22px;
   left: 50%;
   position: fixed;
@@ -2719,11 +2719,11 @@ a {
   z-index: 50;
 }
 
-.cookie-consent[hidden] {
+.privacy-preferences-panel[hidden] {
   display: none;
 }
 
-.cookie-consent-card {
+.privacy-preferences-card {
   align-items: center;
   background: #fff;
   border: 1px solid var(--line-strong);
@@ -2734,45 +2734,45 @@ a {
   padding: 22px;
 }
 
-.cookie-consent-copy {
+.privacy-preferences-copy {
   max-width: 590px;
 }
 
-.cookie-consent-copy strong {
+.privacy-preferences-copy strong {
   color: var(--navy);
   display: block;
   font-size: 1.05rem;
   margin-bottom: 6px;
 }
 
-.cookie-consent-copy p {
+.privacy-preferences-copy p {
   color: var(--ink-soft);
   font-size: 0.92rem;
   line-height: 1.55;
   margin: 0;
 }
 
-.cookie-consent-copy a {
+.privacy-preferences-copy a {
   color: var(--navy);
   font-weight: 750;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.cookie-consent-copy [data-cookie-consent-status] {
+.privacy-preferences-copy [data-cookie-consent-status] {
   color: var(--muted);
   display: block;
   font-size: 0.8rem;
   margin-top: 7px;
 }
 
-.cookie-consent-actions {
+.privacy-preferences-actions {
   display: flex;
   flex: 0 0 auto;
   gap: 9px;
 }
 
-.cookie-settings-button {
+.privacy-settings-button {
   background: #fff;
   border: 1px solid var(--line-strong);
   bottom: 18px;
@@ -2788,8 +2788,8 @@ a {
   z-index: 30;
 }
 
-.cookie-settings-button:hover,
-.cookie-settings-button:focus-visible {
+.privacy-settings-button:hover,
+.privacy-settings-button:focus-visible {
   border-color: var(--navy);
   outline: 3px solid rgba(7, 21, 95, 0.18);
   outline-offset: 2px;
@@ -2930,30 +2930,30 @@ a {
     width: 28px;
   }
 
-  .cookie-consent {
+  .privacy-preferences-panel {
     bottom: 12px;
     width: calc(100% - 24px);
   }
 
-  .cookie-consent-card {
+  .privacy-preferences-card {
     align-items: stretch;
     flex-direction: column;
     gap: 18px;
     padding: 20px;
   }
 
-  .cookie-consent-actions {
+  .privacy-preferences-actions {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .cookie-settings-button {
+  .privacy-settings-button {
     bottom: calc(16px + env(safe-area-inset-bottom));
     left: 12px;
   }
 
   .contact-form-visible .floating-whatsapp,
-  .contact-form-visible .cookie-settings-button {
+  .contact-form-visible .privacy-settings-button {
     opacity: 0;
     pointer-events: none;
     transform: translateY(12px);
