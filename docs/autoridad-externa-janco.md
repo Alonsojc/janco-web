@@ -1,114 +1,82 @@
 # Autoridad externa para Janco
 
-Este documento deja listo el material para crear presencia externa de Janco y
-mandar senales claras a Google desde perfiles y publicaciones.
+Material base para comunicar a Janco como especialista en software para
+arrendadoras y reforzar esa misma señal en perfiles, publicaciones y enlaces.
 
 ## Perfil de LinkedIn de empresa
 
-Nombre:
-Janco
+**Nombre:** Janco
 
-Lema:
-Software para operar negocios reales.
+**Lema:** Software especializado para arrendadoras.
 
-Sitio web:
-https://janco.tech
+**Sitio web:** https://janco.tech
 
-Sector sugerido:
-Desarrollo de software
+**Sector sugerido:** Desarrollo de software
 
-Tamano sugerido:
-1-10 empleados
+**Ubicación:** México
 
-Ubicacion:
-Mexico
+**Descripción:**
 
-Descripcion:
-Janco desarrolla sistemas de operacion para negocios reales en Mexico:
-arrendamiento puro, panaderias, restaurantes fast casual, talleres de bordado y
-software hecho a la medida. Creamos herramientas simples, potentes y cercanas
-para controlar ventas, cobranza, inventario, produccion, reportes y procesos
-criticos sin depender de sistemas genericos que no entienden el negocio.
+Janco es un sistema mexicano especializado en la operación de arrendamiento
+puro de vehículos, maquinaria y equipo. Conecta clientes, cotizaciones,
+contratos, anexos, activos, facturación, cobranza, tesorería y reportes para que
+las áreas trabajen sobre la misma información y reduzcan controles aislados.
 
-Enlace recomendado para el boton principal:
-https://janco.tech
+## Post 1: especialización
 
-## Post 1: arrendamiento puro
+En Janco construimos un sistema hecho exclusivamente para arrendamiento puro.
 
-Texto:
-En Janco construimos un sistema hecho exclusivamente para arrendamiento puro en
-Mexico.
+El flujo nace de lo que una arrendadora necesita todos los días: clientes,
+cotizaciones, contratos, anexos, activos, rentas, facturación, cobranza y
+reportes de cartera.
 
-No es un software de financiamiento adaptado. El flujo nace desde lo que una
-arrendadora necesita todos los dias: contratos, activos, rentas, cobranza,
-facturacion, anexos, reportes y seguimiento de flota.
-
-Tambien estamos integrando automatizaciones utiles como consulta de multas de
-vehiculos en distintos estados para reducir trabajo manual y anticipar riesgos.
-
-Conoce mas:
+Conoce Janco:
 https://janco.tech/sistemas/arrendamiento-puro
 
-Hashtags:
-#ArrendamientoPuro #SoftwareEmpresarial #Cobranza #Mexico #Janco
+**Hashtags:** #ArrendamientoPuro #SoftwareParaArrendadoras #Leasing #México #Janco
 
-Idea visual:
-Publicar 2 o 3 capturas anonimizadas: direccion general, alertas operativas y
-facturacion/cobranza.
+**Idea visual:** dashboard de dirección, contratos y activos con datos de demo.
 
-## Post 2: panaderias
+## Post 2: contratos y activos
 
-Texto:
-Una panaderia no solo necesita vender. Necesita saber que producir, cuanto
-cuesta, que insumos se usaron, que se vendio y donde se esta perdiendo margen.
+Un contrato de arrendamiento no debería vivir separado de sus anexos, activos,
+documentos y vencimientos.
 
-El sistema de panaderias de Janco ayuda a controlar recetas, produccion,
-inventario, ventas y reportes para operar con mas claridad desde el primer dia.
+Janco conecta esa información para que comercial, operaciones y dirección
+puedan seguir la misma historia sin depender de hojas y carpetas aisladas.
 
-Conoce mas:
-https://janco.tech/sistemas/panaderia
+Más información:
+https://janco.tech/recursos/software-contratos-arrendamiento-puro
 
-Hashtags:
-#Panaderia #Inventario #Recetas #SoftwareParaNegocios #Janco
+**Hashtags:** #Contratos #AdministraciónDeActivos #ArrendamientoPuro #Janco
 
-Idea visual:
-Mostrar una captura de produccion del dia, inventario de insumos y reporte de
-ventas.
+**Idea visual:** contrato anonimizado con anexos y activos relacionados.
 
-## Post 3: poke bar y negocios fast casual
+## Post 3: facturación y cobranza
 
-Texto:
-Para un poke bar o restaurante fast casual, el flujo real pasa por barra:
-el cliente elige ingredientes, paga y el equipo prepara el pedido rapido.
+Cobrar mejor empieza por saber qué renta corresponde a qué contrato, qué se
+facturó, qué se pagó y qué vence después.
 
-Por eso en Janco el sistema se enfoca en pedidos, ingredientes, recetas,
-inventario, caja, compras y reportes. No partimos de un modelo de mesas cuando
-el negocio opera de otra forma.
+Janco reúne ese contexto para dar seguimiento a la cartera y visibilidad a la
+dirección de una arrendadora.
 
-Conoce mas:
-https://janco.tech/sistemas/restaurante
+Más información:
+https://janco.tech/recursos/software-cobranza-arrendadoras-mexico
 
-Hashtags:
-#PokeBar #Restaurantes #FastCasual #Inventario #Janco
+**Hashtags:** #Cobranza #Cartera #Facturación #Arrendadoras #Janco
 
-Idea visual:
-Mostrar una captura de pedido en barra, ingredientes y reporte de ventas.
+**Idea visual:** cartera por vencimiento con información totalmente anonimizada.
 
-## Links para perfiles personales
+## Bio para perfiles personales
 
-Bio corta:
-Construyo sistemas para operar negocios reales en Mexico. Janco: https://janco.tech
-
-Bio un poco mas completa:
-Desarrollo sistemas de operacion para arrendamiento puro, panaderias,
-restaurantes fast casual, talleres de bordado y procesos a la medida. Conoce
+Construyo software especializado para la operación de arrendadoras en México.
 Janco: https://janco.tech
 
 ## Checklist de autoridad
 
-- Agregar `https://janco.tech` al perfil personal de GitHub.
-- Agregar `https://janco.tech` al perfil personal de LinkedIn.
-- Crear pagina de empresa Janco en LinkedIn.
-- Publicar 2 o 3 posts con capturas reales o anonimizadas.
-- Pedir a clientes o conocidos que compartan una publicacion inicial.
-- Mantener los READMEs de GitHub con enlaces a las paginas especificas.
+- Agregar `https://janco.tech` a los perfiles personales relevantes.
+- Crear o actualizar la página de empresa Janco en LinkedIn.
+- Mantener la misma descripción especializada en todos los perfiles.
+- Publicar capturas reales o anonimizadas con un aprendizaje operativo.
+- Buscar enlaces legítimos desde clientes, aliados, cámaras o publicaciones del sector.
+- Medir consultas, clics y leads desde Search Console y Analytics.

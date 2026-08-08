@@ -4,13 +4,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const CONTACT_EMAIL = "ventas@janco.tech";
 const MAX_BODY_BYTES = 64_000;
 const DELIVERY_TIMEOUT_MS = 8_000;
-const ALLOWED_SYSTEMS = new Set([
-  "Arrendamiento puro",
-  "Panadería",
-  "Restaurante",
-  "Bordadoras",
-  "Sistema a la medida",
-]);
+const ALLOWED_SYSTEMS = new Set(["Arrendamiento puro"]);
 const FIELD_LIMITS = {
   email: 254,
   empresa: 120,
@@ -166,9 +160,9 @@ function buildLead(payload, req) {
 
 function validateLead(lead) {
   if (!lead.nombre) return { code: "missing_name", message: "Escribe tu nombre." };
-  if (!lead.sistema) return { code: "missing_system", message: "Selecciona el sistema que te interesa." };
+  if (!lead.sistema) return { code: "missing_system", message: "No se pudo identificar la solución solicitada." };
   if (!ALLOWED_SYSTEMS.has(lead.sistema)) {
-    return { code: "invalid_system", message: "Selecciona un sistema válido." };
+    return { code: "invalid_system", message: "La solución solicitada no está disponible." };
   }
   if (!lead.email && !lead.telefono) {
     return { code: "missing_contact", message: "Déjanos un correo o teléfono para contactarte." };
@@ -190,7 +184,7 @@ function leadText(lead) {
     `Empresa: ${lead.empresa || "-"}`,
     `Correo: ${lead.email || "-"}`,
     `Telefono: ${lead.telefono || "-"}`,
-    `Sistema: ${lead.sistema}`,
+    `Solución: ${lead.sistema}`,
     `Pagina: ${lead.pagina}`,
     `UTM source: ${lead.utm_source || "-"}`,
     `UTM medium: ${lead.utm_medium || "-"}`,
@@ -210,7 +204,7 @@ function autoReplyText(lead) {
     "",
     "Gracias por contactar a Janco. Recibimos tu solicitud y vamos a revisarla para proponerte una demo aterrizada a tu operación.",
     "",
-    `Sistema de interés: ${lead.sistema}`,
+    `Solución: ${lead.sistema}`,
     "",
     "Normalmente el siguiente paso es entender tu flujo actual, revisar qué módulos necesitas y enseñarte una demo corta con un caso parecido al tuyo.",
     "",

@@ -205,7 +205,7 @@ cookieConsent.innerHTML = `
   <div class="privacy-preferences-card">
     <div class="privacy-preferences-copy">
       <strong id="privacy-preferences-title">Tu privacidad</strong>
-      <p>Usamos cookies de medición de Google Analytics para entender qué sistemas interesan y mejorar el sitio. Puedes aceptar o rechazar; el sitio funciona igual. <a href="/privacidad">Consulta el aviso de privacidad</a>.</p>
+      <p>Usamos cookies de medición de Google Analytics para entender qué contenidos y recorridos son útiles y mejorar el sitio. Puedes aceptar o rechazar; el sitio funciona igual. <a href="/privacidad">Consulta el aviso de privacidad</a>.</p>
       <span data-cookie-consent-status aria-live="polite"></span>
     </div>
     <div class="privacy-preferences-actions">
@@ -442,8 +442,13 @@ if (lightboxLinks.length > 0) {
 
       preview.src = imageUrl.href;
       preview.alt = image ? image.alt : "Captura ampliada";
-      caption.textContent = figcaption
-        ? figcaption.innerText.replace(/\s+/g, " ").trim()
+      const captionParts = figcaption
+        ? Array.from(figcaption.children)
+            .map((element) => element.innerText.replace(/\s+/g, " ").trim())
+            .filter(Boolean)
+        : [];
+      caption.textContent = captionParts.length
+        ? captionParts.join(" — ")
         : "Captura ampliada";
       downloadLink.href = imageUrl.href;
       downloadLink.download = imageUrl.pathname.split("/").pop() || "captura-janco.png";

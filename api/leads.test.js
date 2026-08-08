@@ -100,6 +100,11 @@ test("valida sistema y al menos un dato de contacto", async () => {
     body: JSON.stringify(validPayload({ sistema: "Otro sistema" })),
   });
   assert.equal(invalidSystem.statusCode, 400);
+
+  const retiredSystem = await invoke({
+    body: JSON.stringify(validPayload({ sistema: "Panadería" })),
+  });
+  assert.equal(retiredSystem.statusCode, 400);
 });
 
 test("acepta el honeypot sin intentar una entrega", async () => {
