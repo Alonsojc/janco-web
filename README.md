@@ -15,6 +15,9 @@ Dominio principal: https://janco.tech
 
 ## Guias SEO
 
+- Centro de conocimiento de arrendamiento puro: https://janco.tech/recursos/arrendamiento-puro
+- Que es el arrendamiento puro, ventajas y desventajas: https://janco.tech/recursos/que-es-arrendamiento-puro
+- Que es un sistema de arrendamiento puro: https://janco.tech/recursos/sistema-arrendamiento-puro
 - Software de cobranza para arrendadoras en Mexico: https://janco.tech/recursos/software-cobranza-arrendadoras-mexico
 - Software de arrendamiento puro en Mexico: https://janco.tech/recursos/software-arrendamiento-puro
 - Software para contratos de arrendamiento puro: https://janco.tech/recursos/software-contratos-arrendamiento-puro

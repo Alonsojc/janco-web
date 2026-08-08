@@ -121,6 +121,14 @@
       "destination": "/sistemas/a-medida.html"
     },
     {
+      "source": "/recursos/arrendamiento-puro",
+      "destination": "/recursos/arrendamiento-puro.html"
+    },
+    {
+      "source": "/recursos/que-es-arrendamiento-puro",
+      "destination": "/recursos/que-es-arrendamiento-puro.html"
+    },
+    {
       "source": "/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras",
       "destination": "/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras.html"
     },
