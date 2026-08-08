@@ -765,6 +765,29 @@ a {
   height: 86%;
 }
 
+.mock-bar.bar-h-42 { height: 42%; }
+.mock-bar.bar-h-46 { height: 46%; }
+.mock-bar.bar-h-48 { height: 48%; }
+.mock-bar.bar-h-52 { height: 52%; }
+.mock-bar.bar-h-53 { height: 53%; }
+.mock-bar.bar-h-54 { height: 54%; }
+.mock-bar.bar-h-55 { height: 55%; }
+.mock-bar.bar-h-56 { height: 56%; }
+.mock-bar.bar-h-58 { height: 58%; }
+.mock-bar.bar-h-62 { height: 62%; }
+.mock-bar.bar-h-64 { height: 64%; }
+.mock-bar.bar-h-65 { height: 65%; }
+.mock-bar.bar-h-66 { height: 66%; }
+.mock-bar.bar-h-68 { height: 68%; }
+.mock-bar.bar-h-70 { height: 70%; }
+.mock-bar.bar-h-72 { height: 72%; }
+.mock-bar.bar-h-76 { height: 76%; }
+.mock-bar.bar-h-78 { height: 78%; }
+.mock-bar.bar-h-82 { height: 82%; }
+.mock-bar.bar-h-84 { height: 84%; }
+.mock-bar.bar-h-86 { height: 86%; }
+.mock-bar.bar-h-88 { height: 88%; }
+
 .page-section {
   padding: 76px 24px;
 }
@@ -1313,22 +1336,6 @@ a {
   --product: var(--navy);
 }
 
-.product-panaderia {
-  --product: var(--green);
-}
-
-.product-restaurante {
-  --product: var(--red);
-}
-
-.product-bordadoras {
-  --product: #0f766e;
-}
-
-.product-a-medida {
-  --product: #475569;
-}
-
 .product-page .page-hero h1 span,
 .product-page .card-link,
 .product-page .step span {
@@ -1675,11 +1682,21 @@ a {
 
 .hero-content h1 {
   color: #05070d;
-  font-size: clamp(3.2rem, 5.6vw, 5.55rem);
+  font-size: clamp(3.2rem, 5.15vw, 4.95rem);
   font-weight: 940;
-  letter-spacing: 0;
-  line-height: 1.03;
+  letter-spacing: -0.035em;
+  line-height: 0.99;
   margin: 0;
+}
+
+.hero-kicker {
+  color: #07155f;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 950;
+  letter-spacing: 0.09em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
 }
 
 .hero-content p {
@@ -1972,6 +1989,10 @@ a {
   padding: 32px;
 }
 
+.showcase-card .learn-link {
+  align-self: end;
+}
+
 .showcase-title {
   align-items: center;
   display: flex;
@@ -2069,20 +2090,12 @@ a {
   height: 14px;
 }
 
-.preview-main.bakery span {
-  background: linear-gradient(90deg, #e5eaf2 0 48%, #f5c27a 48% 62%, #e5eaf2 62%);
+.preview-main.assets-preview span {
+  background: linear-gradient(90deg, #e5eaf2 0 44%, #93c5fd 44% 68%, #e5eaf2 68%);
 }
 
-.preview-main.restaurant span {
-  background: linear-gradient(90deg, #e5eaf2 0 55%, #b8e6c2 55% 70%, #e5eaf2 70%);
-}
-
-.preview-main.embroidery span {
-  background: linear-gradient(90deg, #e5eaf2 0 44%, #99e3d8 44% 64%, #e5eaf2 64%);
-}
-
-.preview-main.custom span {
-  background: linear-gradient(90deg, #e5eaf2 0 50%, #cbd5e1 50% 68%, #e5eaf2 68%);
+.preview-main.collections-preview span {
+  background: linear-gradient(90deg, #e5eaf2 0 54%, #86efac 54% 72%, #e5eaf2 72%);
 }
 
 .learn-link {
