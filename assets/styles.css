@@ -1011,6 +1011,48 @@ a {
   padding-top: clamp(88px, 9vw, 118px);
 }
 
+/* Editorial rhythm: distinguish context, analysis and decision without adding noise. */
+.article-section--soft {
+  background: var(--paper-soft);
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+}
+
+.article-section--tint {
+  background: var(--sky);
+  border-bottom: 1px solid #d5e0f7;
+  border-top: 1px solid #d5e0f7;
+}
+
+.article-section--tint .depth-card {
+  box-shadow: 0 12px 30px rgba(7, 21, 95, 0.07);
+}
+
+.article-section--ink {
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.article-section--ink .section-kicker {
+  color: #b8c9ff;
+}
+
+.article-section--ink .depth-head h2 {
+  color: #fff;
+}
+
+.article-section--ink .depth-head p {
+  color: #d7e0f5;
+}
+
+.article-section--ink .depth-card {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 34px rgba(2, 8, 42, 0.22);
+  color: var(--ink);
+}
+
 .depth-head {
   max-width: 860px;
 }
