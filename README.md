@@ -9,10 +9,11 @@ Dominio principal: https://janco.tech
 
 - Arrendamiento puro: https://janco.tech/sistemas/arrendamiento-puro
 
-## Guias SEO
+## Blog y guías SEO
 
-- Centro de conocimiento de arrendamiento puro: https://janco.tech/recursos/arrendamiento-puro
+- Blog Janco de arrendamiento puro: https://janco.tech/recursos/arrendamiento-puro
 - Que es el arrendamiento puro, ventajas y desventajas: https://janco.tech/recursos/que-es-arrendamiento-puro
+- Opinion editorial, comprar o arrendar un activo: https://janco.tech/recursos/comprar-o-arrendar-activo
 - Que es un sistema de arrendamiento puro: https://janco.tech/recursos/sistema-arrendamiento-puro
 - Software de cobranza para arrendadoras en Mexico: https://janco.tech/recursos/software-cobranza-arrendadoras-mexico
 - Software de arrendamiento puro en Mexico: https://janco.tech/recursos/software-arrendamiento-puro
@@ -25,3 +26,4 @@ Dominio principal: https://janco.tech
 - Janco se comunica públicamente como un solo producto especializado en arrendamiento puro.
 - Las configuraciones, integraciones y reportes particulares se presentan como parte de la implementación de Janco, no como sistemas independientes.
 - Las páginas de los productos anteriores fueron retiradas del sitio y de su sitemap el 8 de agosto de 2026.
+- El Blog Janco distingue entre fuentes oficiales, condiciones contractuales y opinión editorial; no sustituye asesoría profesional para un caso concreto.
