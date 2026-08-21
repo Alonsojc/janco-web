@@ -122,6 +122,10 @@
       "destination": "/recursos/que-es-arrendamiento-puro.html"
     },
     {
+      "source": "/recursos/comprar-o-arrendar-activo",
+      "destination": "/recursos/comprar-o-arrendar-activo.html"
+    },
+    {
       "source": "/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras",
       "destination": "/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras.html"
     },
