@@ -810,16 +810,22 @@ a {
   max-width: 62ch;
 }
 
+.product-arrendamiento .page-section .two-col > div > p:not(.lead) {
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.72;
+}
+
 .product-arrendamiento .page-section h2 + p.lead {
   margin-top: 26px;
 }
 
 .product-arrendamiento .page-section p.lead + p {
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .product-arrendamiento .page-section p + p {
-  margin-top: 20px;
+  margin-top: 26px;
 }
 
 .module-grid {
