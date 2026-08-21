@@ -80,8 +80,9 @@ a {
 
 .site-header {
   backdrop-filter: blur(16px);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid rgba(217, 222, 234, 0.9);
+  box-shadow: 0 8px 24px rgba(9, 11, 18, 0.035);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -792,10 +793,33 @@ a {
   padding: 76px 24px;
 }
 
+/* Keep long-form resources calm and readable on wide screens. */
+.product-arrendamiento .page-section {
+  padding-bottom: clamp(88px, 9vw, 118px);
+  padding-top: clamp(88px, 9vw, 118px);
+}
+
 .two-col {
+  align-items: start;
   display: grid;
-  gap: 36px;
+  gap: clamp(44px, 6vw, 82px);
   grid-template-columns: minmax(0, 0.8fr) minmax(360px, 0.62fr);
+}
+
+.product-arrendamiento .page-section .two-col > div > p {
+  max-width: 62ch;
+}
+
+.product-arrendamiento .page-section h2 + p.lead {
+  margin-top: 26px;
+}
+
+.product-arrendamiento .page-section p.lead + p {
+  margin-top: 24px;
+}
+
+.product-arrendamiento .page-section p + p {
+  margin-top: 20px;
 }
 
 .module-grid {
@@ -824,9 +848,10 @@ a {
 }
 
 .page-aside {
+  align-self: start;
   background: var(--ink);
   color: #fff;
-  padding: 26px;
+  padding: 30px;
 }
 
 .page-aside h2 {
@@ -975,6 +1000,11 @@ a {
   padding: 72px 24px;
 }
 
+.product-arrendamiento .seo-depth {
+  padding-bottom: clamp(88px, 9vw, 118px);
+  padding-top: clamp(88px, 9vw, 118px);
+}
+
 .depth-head {
   max-width: 860px;
 }
@@ -996,7 +1026,7 @@ a {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 30px;
+  margin-top: 38px;
 }
 
 .depth-card {
