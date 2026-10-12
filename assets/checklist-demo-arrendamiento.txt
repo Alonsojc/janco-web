@@ -1,0 +1,91 @@
+CHECKLIST DE DEMO: SOFTWARE DE ARRENDAMIENTO PURO
+Janco | https://janco.tech/recursos/sistema-arrendamiento-puro-cobranza-arrendadoras
+Actualizado: 12 de octubre de 2026
+
+Proveedor: ____________________  Fecha: ____________________
+Evaluador: ____________________  Alcance: ____________________
+Usa datos de ejemplo. Estado: demostrado / pendiente / no cubierto.
+
+1. Cotización a contrato
+Prueba: Usa una propuesta de ejemplo y genera el contrato sin perder condiciones.
+Evidencia esperada: Comprueba cliente, versión y condiciones que llegaron al contrato.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+2. Anexo y activo
+Prueba: Relaciona una unidad con su anexo y contrato.
+Evidencia esperada: Desde el activo se puede revisar su contexto contractual y documental.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+3. Calendario de rentas
+Prueba: Revisa una obligación y su vencimiento.
+Evidencia esperada: El importe y la fecha se explican desde el contrato correspondiente.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+4. Pago parcial
+Prueba: Aplica $12,000 a dos rentas de $10,000 con datos de ejemplo.
+Evidencia esperada: Quedan $8,000 pendientes y el detalle explica la distribución.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+5. Depósito sin referencia
+Prueba: Revisa un cobro cuyo cliente no se puede confirmar.
+Evidencia esperada: Queda pendiente de identificación, con responsable y evidencia requerida.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+6. Movimiento repetido
+Prueba: Presenta por segunda vez el mismo movimiento de ejemplo.
+Evidencia esperada: No se duplica el pago ni se reduce dos veces el saldo.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+7. Permisos
+Prueba: Intenta una autorización con un usuario sin ese permiso.
+Evidencia esperada: La acción se restringe y queda claro quién puede autorizarla.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+8. Corrección e historial
+Prueba: Corrige un dato relevante con el procedimiento previsto.
+Evidencia esperada: Se puede consultar quién cambió qué, cuándo y con qué autorización.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+9. Migración y diferencias
+Prueba: Importa una muestra de contratos y saldos acordada.
+Evidencia esperada: Puedes revisar aceptados, rechazados y diferencias contra el origen.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+10. Reporte y exportación
+Prueba: Obtén cartera a una fecha de corte y exporta su detalle.
+Evidencia esperada: El total concilia con el detalle y el archivo puede usarse fuera del sistema.
+Estado: ____________________
+Evidencia observada: ________________________________________
+Responsable y fecha de pendiente: __________________________
+Costo/configuración adicional: _____________________________
+
+Criterios indispensables: ___________________________________
+Conclusión y siguiente revisión: ____________________________
+Esta plantilla documenta una evaluación; no certifica un sistema.

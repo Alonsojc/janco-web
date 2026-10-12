@@ -1,0 +1,25 @@
+FICHA DE DECISIÓN: COMPRAR O ARRENDAR UN ACTIVO
+Janco | https://janco.tech/recursos/comprar-o-arrendar-activo
+Actualizado: 12 de octubre de 2026
+
+Activo y versión: ___________________________________________
+Fecha de disponibilidad: ____________________________________
+Horizonte de uso: ___________________________________________
+Uso esperado y escenario conservador: _______________________
+
+Completa para COMPRA y ARRENDAMIENTO, usando el mismo activo y plazo:
+- Fuente, fecha y vigencia de la propuesta: ___________________
+- Pago inicial no reembolsable: ______________________________
+- Depósito reembolsable y condiciones: _______________________
+- Pagos periódicos, número y conceptos: ______________________
+- Impuestos y servicios incluidos/no incluidos: ______________
+- Seguro y mantenimiento: ___________________________________
+- Cierre: devolución, reventa o adquisición expresa: __________
+- Supuestos de reventa y costo de venta, cuando apliquen: ______
+- Costo de terminar anticipadamente en la fecha elegida: ______
+- Caja inicial requerida y pagos durante el plazo: ____________
+- Costo total estimado y supuestos pendientes: ________________
+
+Separar hechos contratados de estimaciones. Validar por separado el
+tratamiento fiscal, contable y contractual del caso concreto.
+Conclusión, responsable y fecha de revisión: __________________
