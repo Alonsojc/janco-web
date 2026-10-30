@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("/assets/fonts/inter-latin-ext-variable.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("/assets/fonts/inter-latin-variable.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+.home-redesign {
+  --ink: #101942;
+  --ink-soft: #46536c;
+  --navy: #101942;
+  --navy-2: #27355c;
+  --font: "Inter Variable", Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #f8f7f4;
+  color: var(--ink);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+.home-redesign .site-header {
+  background: rgba(248, 247, 244, 0.97);
+  border: 0;
+  box-shadow: none;
+}
+.home-redesign .nav { max-width: 1204px; min-height: 75px; }
+.home-redesign .brand-logo { height: 48px; }
+.home-redesign .nav-links { gap: 32px; }
+.home-redesign .nav-links a { color: #101942; font-size: 14px; font-weight: 500; }
+.home-redesign .nav-links a:hover { border-color: transparent; color: #4f796c; }
+.home-redesign .btn { border-radius: 6px; font-size: 15px; font-weight: 650; min-height: 51px; }
+.home-redesign .btn-primary { background: #101942; border-color: #101942; box-shadow: none; }
+.home-redesign .btn-primary:hover, .home-redesign .btn-primary:focus-visible { background: #27355c; }
+.home-redesign .nav-actions .btn { font-size: 14px; min-height: 47px; }
+.home-redesign .menu-button { background: transparent; border: 0; border-radius: 6px; }
+.home-redesign .home-hero { background: transparent; border: 0; padding: 39px 20px 0; text-align: center; }
+.new-hero-content { margin: 0 auto; max-width: 1200px; }
+.new-eyebrow { color: #4f796c; font-size: 14px; font-weight: 700; letter-spacing: 2.5px; line-height: 20px; margin: 0; text-transform: uppercase; }
+.new-hero h1 { color: #101942; font-size: clamp(52px, 5.49vw, 79px); font-weight: 800; letter-spacing: -3.6px; line-height: .95; margin: 24px 0 13px; }
+.new-hero-description { color: #46536c; font-size: 20px; line-height: 30px; margin: 0 auto; }
+.new-hero-actions { align-items: center; display: flex; gap: 36px; justify-content: center; margin: 24px 0 0; }
+.new-hero-actions .btn { font-size: 17px; gap: 21px; }
+.new-hero-actions img, .connected-story a img { height: 20px; width: 20px; }
+.new-text-action { align-items: center; display: inline-flex; font-size: 16px; font-weight: 650; gap: 21px; min-height: 48px; }
+.new-text-action:hover { color: #4f796c; }
+.journey-shell { margin-inline: auto; max-width: 1340px; width: calc(100% - 106px); }
+.journey-section { scroll-margin-top: 90px; }
+.journey-tabs { align-items: center; display: flex; gap: 24px; height: 58px; margin: 37px 20px 0; }
+.journey-step { align-items: center; display: flex; flex: 1; gap: 24px; min-width: 0; }
+.journey-step:last-child { flex: 0 0 auto; }
+.journey-step button { align-items: center; background: transparent; border: 0; color: #647087; cursor: pointer; display: flex; font: 600 17px/1.2 var(--font); gap: 14px; padding: 0 0 8px; position: relative; white-space: nowrap; }
+.journey-step button::after { background: transparent; bottom: 0; content: ""; height: 2px; left: 0; position: absolute; right: 0; }
+.journey-step button[aria-selected="true"] { color: #101942; }
+.journey-step button[aria-selected="true"]::after { background: #101942; }
+.journey-step button:hover { color: #101942; }
+.journey-step button > span { align-items: center; border: 1px solid #7c9d91; border-radius: 50%; color: #547866; display: inline-flex; font-size: 16px; height: 42px; justify-content: center; width: 42px; }
+.journey-step button[aria-selected="true"] > span { background: #101942; border-color: #101942; color: #fff; }
+.journey-step > i { border-top: 1px solid #c2cdca; flex: 1; margin-bottom: 8px; min-width: 20px; }
+.journey-caption { color: #647087; font-size: 12px; letter-spacing: .15px; line-height: 18px; margin: 19px 9px 8px; text-align: right; }
+.journey-window { background: #fff; border: 1px solid #d2d9e3; border-radius: 9px; display: grid; grid-template-columns: 296px minmax(0, 1fr); min-height: 386px; overflow: hidden; }
+.journey-sidebar { background: #19253e; color: #fff; padding: 18px 16px 24px; }
+.journey-logo { filter: brightness(0) invert(1); height: auto; margin-left: 13px; width: 106px; }
+.journey-case { margin: 23px 13px 27px; }
+.journey-case p { color: #d5dce8; font-size: 14px; font-weight: 500; margin: 0 0 6px; }
+.journey-case strong { display: block; font-size: 24px; font-weight: 650; letter-spacing: -.5px; }
+.journey-case > span { color: #bfc9da; display: block; font-size: 14px; margin-top: 7px; }
+.journey-menu { display: grid; gap: 8px; }
+.journey-menu button { align-items: center; background: none; border: 0; border-radius: 6px; color: #edf1f7; cursor: pointer; display: flex; font: 400 14px/1.2 var(--font); gap: 16px; min-height: 47px; padding: 13px 18px; text-align: left; }
+.journey-menu button:hover { background: #2c3953; }
+.journey-menu button[aria-pressed="true"] { background: #3b4863; }
+.journey-menu img { flex-shrink: 0; height: 23px; width: 23px; }
+.journey-detail { min-width: 0; padding: 42px 38px 28px 42px; }
+.journey-heading { align-items: center; border-bottom: 1px solid #d8dee7; display: flex; gap: 30px; padding-bottom: 17px; }
+.journey-heading h3 { color: #101942; font-size: 29px; font-weight: 720; letter-spacing: -.8px; line-height: 36px; margin: 0; }
+.journey-status { align-items: center; background: #dceee6; border-radius: 8px; color: #28624f; display: inline-flex; flex-shrink: 0; font-size: 14px; font-weight: 600; gap: 8px; line-height: 18px; padding: 5px 11px; }
+.journey-status > span:first-child { background: #28624f; border-radius: 50%; height: 10px; width: 10px; }
+.journey-fields { display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 35px 0 43px; }
+.journey-fields dt { color: #67748b; font-size: 14px; line-height: 20px; margin-bottom: 7px; white-space: nowrap; }
+.journey-fields dd { color: #101942; font-size: 18px; font-weight: 600; letter-spacing: -.25px; margin: 0; white-space: nowrap; }
+.journey-progress { border-top: 1px solid #d8dee7; padding-top: 31px; }
+.journey-progress > p { color: #67748b; font-size: 14px; line-height: 20px; margin: 0; }
+.journey-progress ol { display: flex; gap: 19px; list-style: none; margin: 22px 0 0; padding: 0; }
+.journey-progress li { align-items: center; display: flex; flex: 1; font-size: 14px; gap: 16px; line-height: 20px; white-space: nowrap; }
+.journey-progress li:last-child { flex: 0 0 auto; }
+.journey-check { align-items: center; background: #6c9083; border-radius: 50%; display: inline-flex; flex-shrink: 0; height: 40px; justify-content: center; width: 40px; }
+.journey-check img { height: 20px; width: 20px; }
+.journey-progress li > i { background: #71998c; flex: 1; height: 1px; min-width: 17px; }
+[data-journey-panel][hidden] { display: none; }
+.journey-documents { padding-top: 5px; }
+.journey-documents details { border-bottom: 1px solid #e5e8ed; }
+.journey-documents summary { align-items: center; cursor: pointer; display: flex; gap: 18px; justify-content: space-between; padding: 19px 3px; }
+.journey-documents summary:hover { background: #f8faf9; }
+.journey-documents summary > span:first-child { display: grid; gap: 7px; }
+.journey-documents strong { font-size: 14px; font-weight: 550; }
+.journey-documents small { color: #647087; font-size: 12px; }
+.journey-documents summary > span:last-child { color: #3b7660; font-size: 12px; }
+.journey-documents details > p, .journey-rentals > p, .journey-noscript { color: #647087; font-size: 13px; line-height: 1.5; }
+.journey-rentals { padding-top: 20px; }
+.journey-rentals > p { margin: 0 0 15px; }
+.journey-table-scroll { overflow-x: auto; }
+.journey-rentals table { border-collapse: collapse; font-size: 14px; text-align: left; white-space: nowrap; width: 100%; }
+.journey-rentals th, .journey-rentals td { border-bottom: 1px solid #e5e8ed; padding: 14px 12px; }
+.journey-rentals th { color: #647087; font-size: 12px; font-weight: 500; }
+.journey-rentals th:first-child, .journey-rentals td:first-child { padding-left: 0; }
+.connected-story { align-items: center; border-bottom: 1px solid #c5ced7; border-top: 1px solid #c5ced7; display: grid; gap: 76px; grid-template-columns: 1fr 1.35fr; margin-top: 39px; min-height: 158px; padding: 28px 10.6%; }
+.connected-story h2 { font-size: 42px; font-weight: 750; letter-spacing: -1.7px; line-height: 1.04; margin: 0; white-space: nowrap; }
+.connected-story > div { border-left: 1px solid #cdd3d9; margin-left: -44px; padding-left: 44px; }
+.connected-story p { color: #45526c; font-size: 20px; line-height: 29px; margin: 0 0 12px; white-space: nowrap; }
+.connected-story a { align-items: center; display: inline-flex; font-size: 15px; font-weight: 650; gap: 16px; line-height: 24px; text-decoration: underline; text-underline-offset: 3px; }
+.connected-story a:hover { color: #507d6b; }
+.journey-step button:focus-visible, .journey-menu button:focus-visible, .journey-documents summary:focus-visible, .demo-dialog-close:focus-visible, .connected-story a:focus-visible, .new-text-action:focus-visible { outline: 3px solid #729c8e; outline-offset: 4px; }
+/* Keep the real content and lead form while carrying the selected visual language through the page. */
+.home-redesign .home-section, .home-redesign .packages-home, .home-redesign .resource-home, .home-redesign .contact-home { background: #f8f7f4; }
+.home-redesign .systems-home { padding-top: 90px; }
+.home-redesign .section-kicker, .home-redesign .resource-tag, .home-redesign .package-card span { color: #4f796c; font-weight: 700; letter-spacing: .12em; }
+.home-redesign .center-head h2, .home-redesign .proof-copy h2, .home-redesign .packages-home h2, .home-redesign .contact-copy h2 { color: #101942; font-weight: 750; letter-spacing: -.035em; }
+.home-redesign .system-showcase { gap: 30px; }
+.home-redesign .showcase-card { background: transparent; border: 0; border-radius: 0; border-top: 1px solid #cdd3db; box-shadow: none; padding: 28px 0 0; }
+.home-redesign .showcase-icon, .home-redesign .mini-preview { display: none; }
+.home-redesign .showcase-title { min-height: 0; }
+.home-redesign .showcase-card h3 { font-size: 1.45rem; letter-spacing: -.025em; }
+.home-redesign .showcase-card p { margin-top: 17px; }
+.home-redesign .card-check-list li::before, .home-redesign .package-card li::before { background: #6b9082; }
+.home-redesign .learn-link { color: #101942; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.home-redesign .benefits-hero { background: #19253e; }
+.home-redesign .sales-proof { background: #f1f3ef; border-color: #dce1dc; }
+.home-redesign .demo-route span { background: #19253e; }
+.home-redesign .demo-route article, .home-redesign .package-card, .home-redesign .resource-card { border-color: #dce2e0; box-shadow: none; }
+.home-redesign .package-card.featured { border-color: #7d9b8e; box-shadow: none; }
+.home-redesign .resource-home { border-color: #dce2e0; border-top: 1px solid #dce2e0; }
+.home-redesign .contact-copy { border-color: #cdd3d9; }
+.home-redesign .contact-form input, .home-redesign .contact-form textarea { font-family: var(--font); font-weight: 400; }
+.home-redesign .home-footer { background: #f1f3ef; }
+.demo-dialog { background: #f9f8f5; border: 1px solid #e0e3df; border-radius: 16px; box-shadow: 0 22px 100px #0e173a30; color: #101942; max-height: calc(100dvh - 40px); max-width: min(650px, calc(100% - 32px)); padding: 0; width: 100%; }
+.demo-dialog::backdrop { backdrop-filter: blur(5px); background: #10192d77; }
+.demo-dialog-content { padding: 44px; position: relative; }
+.demo-dialog .new-eyebrow { font-size: 11px; letter-spacing: 2px; margin-bottom: 14px; }
+.demo-dialog h2 { color: #101942; font-size: 36px; letter-spacing: -1.25px; line-height: 1.1; margin: 0 0 17px; }
+.demo-dialog-intro { color: #5d6a7d; font-size: 15px; line-height: 1.65; margin: 0 0 12px; }
+.demo-dialog-close { align-items: center; background: transparent; border: 0; border-radius: 50%; color: #101942; cursor: pointer; display: inline-flex; font: 400 28px/1 var(--font); height: 42px; justify-content: center; position: absolute; right: 12px; top: 12px; width: 42px; }
+.demo-dialog-close:hover { background: #e8ece7; }
+.demo-dialog .contact-form { padding-top: 16px; }
+@media (max-width: 1200px) {
+  .journey-shell { width: calc(100% - 64px); }
+  .journey-window { grid-template-columns: 240px minmax(0, 1fr); }
+  .journey-detail { padding: 32px 28px; }
+  .journey-heading { gap: 16px; }
+  .journey-heading h3 { font-size: 25px; }
+  .journey-fields { gap: 10px; }
+  .journey-fields dd { font-size: 15px; }
+  .journey-fields dt { font-size: 12px; }
+  .journey-progress ol { gap: 12px; }
+  .journey-progress li { font-size: 12px; gap: 9px; }
+  .journey-check { height: 32px; width: 32px; }
+  .connected-story { gap: 50px; padding-inline: 8%; }
+  .connected-story > div { margin-left: -30px; padding-left: 30px; }
+  .connected-story h2 { font-size: 36px; }
+  .connected-story p { font-size: 17px; line-height: 25px; }
+}
+@media (max-width: 960px) {
+  .home-redesign .nav-links { gap: 18px; }
+  .new-hero h1 { font-size: 58px; letter-spacing: -2.8px; }
+  .new-hero-description { font-size: 17px; }
+  .journey-tabs, .journey-step { gap: 14px; }
+  .journey-tabs { margin-inline: 0; }
+  .journey-step button { font-size: 14px; gap: 9px; }
+  .journey-step button > span { font-size: 13px; height: 35px; width: 35px; }
+  .journey-window { grid-template-columns: 210px minmax(0, 1fr); }
+  .journey-sidebar { padding: 20px 12px; }
+  .journey-case { margin-inline: 7px; }
+  .journey-case p { font-size: 12px; }
+  .journey-menu button { font-size: 12px; gap: 11px; padding: 12px 10px; }
+  .journey-detail { padding: 28px 23px; }
+  .journey-heading { align-items: flex-start; flex-wrap: wrap; gap: 10px; }
+  .journey-heading h3 { font-size: 24px; }
+  .journey-fields { gap: 20px; grid-template-columns: repeat(2, 1fr); margin: 24px 0; }
+  .journey-fields dd { font-size: 16px; }
+  .journey-progress { padding-top: 22px; }
+  .journey-progress ol { flex-direction: column; gap: 13px; margin-top: 15px; }
+  .journey-progress li { font-size: 13px; }
+  .journey-progress li > i { display: none; }
+  .connected-story { gap: 40px; padding-inline: 4%; }
+  .connected-story h2 { font-size: 32px; }
+  .connected-story p { font-size: 16px; white-space: normal; }
+  .desktop-break { display: none; }
+  .connected-story a { font-size: 13px; gap: 10px; }
+}
+@media (max-width: 820px) {
+  .home-redesign .nav { gap: 10px; padding-inline: 20px; }
+  .home-redesign .brand-logo { height: 43px; }
+  .home-redesign .nav-actions .btn { display: inline-flex; font-size: 12px; min-height: 40px; padding: 0 14px; }
+  .home-redesign .nav-links { background: #f8f7f4; border-color: #dce2e0; gap: 0; }
+  .home-redesign .nav-links a { font-size: 14px; padding: 13px 16px; }
+}
+@media (max-width: 700px) {
+  .home-redesign .home-hero { padding: 35px 20px 0; }
+  .new-eyebrow { font-size: 9px; letter-spacing: 1.65px; line-height: 18px; }
+  .new-hero h1 { font-size: clamp(35px, 10.4vw, 57px); letter-spacing: -1.8px; line-height: 1.04; margin: 20px 0 17px; }
+  .new-hero h1 br { display: none; }
+  .new-hero h1 span { display: block; }
+  .new-hero-description { font-size: 15px; line-height: 24px; margin-inline: auto; max-width: 355px; }
+  .new-hero-actions { flex-direction: column; gap: 13px; margin-top: 25px; }
+  .new-hero-actions .btn { font-size: 15px; min-height: 47px; }
+  .new-text-action { font-size: 13px; gap: 13px; min-height: 36px; }
+  .journey-shell { width: calc(100% - 36px); }
+  .journey-tabs { gap: 0; height: 73px; justify-content: space-between; margin-top: 32px; }
+  .journey-step, .journey-step:last-child { flex: 1; gap: 0; justify-content: center; }
+  .journey-step button { flex-direction: column; font-size: 12px; gap: 10px; padding: 0 5px 12px; }
+  .journey-step button > span { font-size: 12px; height: 31px; width: 31px; }
+  .journey-step > i { display: none; }
+  .journey-caption { font-size: 10px; margin: 20px 0 9px; }
+  .journey-window { display: block; }
+  .journey-sidebar { align-items: start; column-gap: 18px; display: grid; grid-template-columns: 95px 1fr; padding: 20px 16px 14px; }
+  .journey-logo { margin: 0; width: 86px; }
+  .journey-case { margin: 0; }
+  .journey-case p { font-size: 10px; line-height: 15px; margin-bottom: 3px; }
+  .journey-case strong { font-size: 18px; }
+  .journey-case > span { font-size: 10px; margin-top: 4px; }
+  .journey-menu { display: flex; gap: 5px; grid-column: 1 / -1; justify-content: space-between; margin-top: 18px; }
+  .journey-menu button { flex: 1; font-size: 10px; gap: 5px; justify-content: center; min-height: 38px; padding: 10px 7px; white-space: nowrap; }
+  .journey-menu img { height: 16px; width: 16px; }
+  .journey-detail { min-height: 362px; padding: 23px 21px 27px; }
+  .journey-heading { align-items: center; gap: 9px; padding-bottom: 15px; }
+  .journey-heading h3 { font-size: 20px; letter-spacing: -.65px; line-height: 27px; }
+  .journey-status { border-radius: 5px; font-size: 10px; gap: 5px; line-height: 15px; padding: 3px 7px; }
+  .journey-status > span:first-child { height: 8px; width: 8px; }
+  .journey-fields { gap: 22px 15px; margin: 22px 0 25px; }
+  .journey-fields dt { font-size: 11px; margin-bottom: 6px; }
+  .journey-fields dd { font-size: 14px; }
+  .journey-progress { padding-top: 22px; }
+  .journey-progress > p { font-size: 12px; }
+  .journey-progress ol { gap: 13px; margin-top: 17px; }
+  .journey-progress li { font-size: 12px; gap: 12px; }
+  .journey-check { height: 27px; width: 27px; }
+  .journey-check img { height: 17px; width: 17px; }
+  .journey-documents strong { font-size: 12px; line-height: 1.5; }
+  .journey-documents small { font-size: 10px; }
+  .journey-rentals table { font-size: 12px; }
+  .journey-rentals th, .journey-rentals td { padding-inline: 10px; }
+  .connected-story { display: block; margin-top: 30px; padding: 30px 5px; }
+  .connected-story h2 { font-size: 32px; letter-spacing: -1.1px; margin-bottom: 20px; }
+  .connected-story > div { border: 0; margin: 0; padding: 0; }
+  .connected-story p { font-size: 15px; line-height: 24px; margin-bottom: 15px; }
+  .connected-story a { font-size: 12px; }
+  .demo-dialog { border-radius: 12px; max-height: calc(100dvh - 24px); max-width: calc(100% - 24px); }
+  .demo-dialog-content { padding: 43px 24px 27px; }
+  .demo-dialog .new-eyebrow { font-size: 9px; }
+  .demo-dialog h2 { font-size: 29px; }
+  .demo-dialog-intro { font-size: 14px; }
+  .demo-dialog input:not([type="checkbox"]), .demo-dialog textarea { font-size: 16px; }
+}
+@media (max-width: 380px) {
+  .home-redesign .nav-actions .btn { font-size: 11px; padding-inline: 9px; }
+  .home-redesign .brand-logo { height: 38px; }
+  .journey-menu { display: grid; gap: 6px; grid-template-columns: 1fr 1fr; }
+  .journey-menu button { font-size: 11px; min-height: 40px; }
+  .journey-menu button:last-child { grid-column: 1 / -1; }
+  .journey-detail { padding-inline: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .home-redesign *, .home-redesign *::before, .home-redesign *::after { scroll-behavior: auto; transition-duration: .01ms !important; } }
+@media (max-width: 820px) {
+  .home-redesign .contact-layout { grid-template-columns: minmax(0, 1fr); }
+  .home-redesign .contact-copy, .home-redesign .contact-form,
+  .home-redesign .form-row, .home-redesign .form-field { min-width: 0; }
+  .home-redesign .contact-form button { line-height: 1.25; padding-inline: 12px; text-align: center; white-space: normal; }
+  .home-redesign .contact-form button .icon { flex-shrink: 0; }
+}
+@media (max-width: 820px) {
+  .home-redesign.journey-visible .floating-whatsapp:not(:focus-visible),
+  .home-redesign.journey-visible .privacy-settings-button:not(:focus-visible) {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}

@@ -27,6 +27,7 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="/assets/styles.css?v=20260821d">
+    <link rel="stylesheet" href="/assets/home-redesign-20261030.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -75,7 +76,7 @@
       }
     </script>
   </head>
-  <body class="home-page">
+  <body class="home-page home-redesign">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header" data-open="false">
       <nav class="nav" aria-label="Navegación principal">
@@ -83,13 +84,10 @@
           <img class="brand-logo" src="/assets/janco-logo-333.webp" alt="Janco" width="333" height="130">
         </a>
         <div class="nav-links" id="menu-principal">
-          <a href="#inicio">Inicio</a>
           <a href="#producto">Producto</a>
-          <a href="#recursos">Blog</a>
-          <a href="#beneficios">Beneficios</a>
           <a href="#demo">Cómo funciona</a>
           <a href="#implementacion">Implementación</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#recursos">Blog</a>
         </div>
         <div class="nav-actions">
           <a class="btn btn-primary" href="#contacto">Solicitar demo</a>
@@ -104,87 +102,76 @@
     </header>
 
     <main id="contenido">
-      <section class="home-hero" id="inicio">
-        <div class="home-shell hero-layout">
-          <div class="hero-content">
-            <span class="hero-kicker">Software especializado para arrendadoras</span>
-            <h1>El sistema operativo de tu arrendadora.</h1>
-            <p>Janco conecta clientes, cotizaciones, contratos, activos, facturación, cobranza y tesorería para operar arrendamiento puro de vehículos, maquinaria y equipo.</p>
-            <div class="hero-buttons">
-              <a class="btn btn-primary" href="#producto">
-                Conocer Janco
-                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-              <a class="btn btn-secondary" href="#contacto">
-                Solicitar demo
-                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M7 4v3M17 4v3M5 10h14M6 6h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-            </div>
-            <div class="trust-row">
-              <span><svg viewBox="0 0 24 24" fill="none"><path d="m7 12 3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Especializado en arrendamiento puro</span>
-              <span><svg viewBox="0 0 24 24" fill="none"><path d="m7 12 3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Hecho en México</span>
-              <span><svg viewBox="0 0 24 24" fill="none"><path d="m7 12 3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Acompañamiento cercano</span>
-            </div>
-          </div>
-          <div class="hero-device" role="img" aria-label="Vista ilustrativa de un dashboard Janco">
-            <div class="mock-laptop">
-              <div class="screen">
-                <aside>
-                  <strong>Janco</strong>
-                  <span>Dirección</span>
-                  <span>Clientes</span>
-                  <span>Cotizaciones</span>
-                  <span>Contratos</span>
-                  <span>Activos</span>
-                  <span>Cobranza</span>
-                </aside>
-                <div class="screen-main">
-                  <div class="screen-top">
-                    <strong>Resumen general</strong>
-                    <div><span></span><span></span><span></span></div>
-                  </div>
-                  <div class="stat-grid">
-                    <div><span>Contratos activos</span><strong>128</strong></div>
-                    <div><span>Cartera por cobrar</span><strong>$1,245,800</strong></div>
-                    <div><span>Rentas del mes</span><strong>86</strong></div>
-                    <div><span>Activos monitoreados</span><strong>214</strong></div>
-                  </div>
-                  <div class="dashboard-grid">
-                    <div class="chart-card">
-                      <span>Cobranza mensual</span>
-                      <svg viewBox="0 0 240 110" fill="none" aria-hidden="true">
-                        <path d="M16 92h206M20 20v72" stroke="#d8deea" stroke-width="2"/>
-                        <path d="M28 80 62 58l34 12 34-36 34 18 42-34" stroke="#07155f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        <g fill="#07155f"><circle cx="28" cy="80" r="4"/><circle cx="62" cy="58" r="4"/><circle cx="96" cy="70" r="4"/><circle cx="130" cy="34" r="4"/><circle cx="164" cy="52" r="4"/><circle cx="206" cy="18" r="4"/></g>
-                      </svg>
-                    </div>
-                    <div class="due-card">
-                      <strong>Vencimientos próximos</strong>
-                      <p>Unidad CR-V <span>$34,000</span></p>
-                      <p>Montacargas Yale <span>$18,400</span></p>
-                      <p>Equipo industrial <span>$27,300</span></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="phone-mock">
-              <div class="phone-notch"></div>
-              <strong>Cartera</strong>
-              <p>Mes actual <span>$1,245,800</span></p>
-              <p>Por cobrar <span>$980,200</span></p>
-              <small>Seguimiento de rentas</small>
-              <button type="button" tabindex="-1" aria-hidden="true">Ver todos</button>
-            </div>
+      <section class="home-hero new-hero" id="inicio" aria-labelledby="inicio-titulo">
+        <div class="new-hero-content">
+          <p class="new-eyebrow">Arrendamiento puro, de principio a fin</p>
+          <h1 id="inicio-titulo">De la cotización al cobro.<br><span>Todo conectado.</span></h1>
+          <p class="new-hero-description">Un mismo expediente para tu equipo comercial, operativo y de cobranza.</p>
+          <div class="new-hero-actions">
+            <a class="btn btn-primary" href="#contacto">Solicitar demo <img src="/assets/icons/arrow-right-light.svg" alt="" width="20" height="20"></a>
+            <a class="new-text-action" href="#producto">Ver cómo funciona <img src="/assets/icons/arrow-right-navy.svg" alt="" width="20" height="20"></a>
           </div>
         </div>
       </section>
 
-      <section class="home-section systems-home" id="producto">
+      <section class="journey-section journey-shell" id="producto" aria-labelledby="journey-title">
+        <h2 class="visually-hidden" id="journey-title">Explora una operación de arrendamiento</h2>
+        <div class="journey-tabs" role="tablist" aria-label="Etapas del arrendamiento">
+          <div class="journey-step"><button type="button" id="journey-stage-0" role="tab" aria-selected="false" aria-controls="journey-panel" tabindex="-1" data-journey-stage="0"><span aria-hidden="true">01</span>Cotización</button><i aria-hidden="true"></i></div>
+          <div class="journey-step"><button type="button" id="journey-stage-1" role="tab" aria-selected="true" aria-controls="journey-panel" tabindex="0" data-journey-stage="1"><span aria-hidden="true">02</span>Contrato</button><i aria-hidden="true"></i></div>
+          <div class="journey-step"><button type="button" id="journey-stage-2" role="tab" aria-selected="false" aria-controls="journey-panel" tabindex="-1" data-journey-stage="2"><span aria-hidden="true">03</span>Activo</button><i aria-hidden="true"></i></div>
+          <div class="journey-step"><button type="button" id="journey-stage-3" role="tab" aria-selected="false" aria-controls="journey-panel" tabindex="-1" data-journey-stage="3"><span aria-hidden="true">04</span>Cobranza</button></div>
+        </div>
+        <p class="journey-caption">Vista ilustrativa · Datos de ejemplo</p>
+        <div class="journey-window" id="journey-panel" role="tabpanel" aria-labelledby="journey-stage-1">
+          <aside class="journey-sidebar">
+            <img class="journey-logo" src="/assets/janco-logo-333.webp" alt="Janco" width="333" height="130">
+            <div class="journey-case"><p>Expediente de arrendamiento</p><strong>ARR-0128</strong><span>Cliente de ejemplo</span></div>
+            <nav class="journey-menu" aria-label="Secciones del expediente ilustrativo">
+              <button type="button" data-journey-view="resumen" aria-pressed="true"><img src="/assets/icons/file-text-light.svg" alt="" width="22" height="22">Resumen</button>
+              <button type="button" data-journey-view="documentos" aria-pressed="false"><img src="/assets/icons/file-light.svg" alt="" width="22" height="22">Documentos</button>
+              <button type="button" data-journey-view="rentas" aria-pressed="false"><img src="/assets/icons/calendar-light.svg" alt="" width="22" height="22">Calendario de rentas</button>
+            </nav>
+          </aside>
+          <div class="journey-detail" aria-live="polite" aria-atomic="false">
+            <div class="journey-heading"><h3 data-journey-heading>Contrato ARR-0128</h3><span class="journey-status"><span aria-hidden="true"></span><span data-journey-status>Activo</span></span></div>
+            <div data-journey-panel="resumen">
+              <dl class="journey-fields">
+                <div><dt data-journey-label>Activo</dt><dd data-journey-value>Vehículo</dd></div>
+                <div><dt data-journey-label>Plazo</dt><dd data-journey-value>36 meses</dd></div>
+                <div><dt data-journey-label>Renta mensual</dt><dd data-journey-value>$18,500 MXN</dd></div>
+                <div><dt data-journey-label>Próximo vencimiento</dt><dd data-journey-value>02 nov 2026</dd></div>
+              </dl>
+              <div class="journey-progress"><p>Avance del expediente</p><ol>
+                <li><span class="journey-check"><img src="/assets/icons/check-light.svg" alt="" width="20" height="20"></span><span data-journey-progress>Cotización aceptada</span><i aria-hidden="true"></i></li>
+                <li><span class="journey-check"><img src="/assets/icons/check-light.svg" alt="" width="20" height="20"></span><span data-journey-progress>Contrato firmado</span><i aria-hidden="true"></i></li>
+                <li><span class="journey-check"><img src="/assets/icons/check-light.svg" alt="" width="20" height="20"></span><span data-journey-progress>Activo asignado</span></li>
+              </ol></div>
+            </div>
+            <div class="journey-documents" data-journey-panel="documentos" hidden>
+              <details><summary><span><strong>Contrato de arrendamiento</strong><small>Contrato · 02 dic 2025</small></span><span>Firmado</span></summary><p>Ejemplo de documento relacionado con el contrato ARR-0128. Esta vista no contiene un archivo real.</p></details>
+              <details><summary><span><strong>Anexo de identificación del activo</strong><small>Activo · 02 dic 2025</small></span><span>Completo</span></summary><p>Ejemplo de anexo relacionado con el activo del contrato.</p></details>
+              <details><summary><span><strong>Expediente del cliente</strong><small>Cliente · 28 nov 2025</small></span><span>Completo</span></summary><p>Ejemplo de documento relacionado con el cliente del contrato.</p></details>
+            </div>
+            <div class="journey-rentals" data-journey-panel="rentas" hidden>
+              <p>Un calendario relacionado con el contrato y sus pagos.</p>
+              <div class="journey-table-scroll"><table><thead><tr><th>Renta</th><th>Vencimiento</th><th>Importe</th><th>Estado</th></tr></thead><tbody>
+                <tr><td>11 / 36</td><td data-journey-rent-date="-1">02 oct 2026</td><td>$18,500 MXN</td><td>Pagada</td></tr>
+                <tr><td>12 / 36</td><td data-journey-rent-date="0">02 nov 2026</td><td>$18,500 MXN</td><td>Próxima</td></tr>
+                <tr><td>13 / 36</td><td data-journey-rent-date="1">02 dic 2026</td><td>$18,500 MXN</td><td>Programada</td></tr>
+              </tbody></table></div>
+            </div>
+          </div>
+        </div>
+        <noscript><p class="journey-noscript">La vista muestra un contrato de ejemplo; activa JavaScript para explorar otras etapas.</p></noscript>
+      </section>
+
+      <section class="connected-story journey-shell" aria-labelledby="connected-title">
+        <h2 id="connected-title">Cada área ve la<br>misma historia.</h2>
+        <div><p>Clientes, documentos, activos, facturas y pagos<br class="desktop-break"> relacionados en una sola operación.</p><a href="#implementacion">Conoce la implementación por etapas <img src="/assets/icons/arrow-right-navy.svg" alt="" width="20" height="20"></a></div>
+      </section>
+
+      <section class="home-section systems-home" id="modulos">
         <div class="home-shell">
           <div class="center-head">
             <span class="section-kicker">Una plataforma especializada</span>
@@ -259,47 +246,6 @@
               <a class="learn-link" href="recursos/software-cobranza-arrendadoras-mexico">Ver cobranza para arrendadoras <span aria-hidden="true">→</span></a>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="resource-home" id="recursos">
-        <div class="home-shell">
-          <div class="center-head">
-            <span class="section-kicker">Blog Janco</span>
-            <h2>Ideas para decidir y operar con claridad</h2>
-            <p>Análisis y guías sobre arrendamiento puro, contratos, activos, cobranza y tecnología para arrendadoras.</p>
-          </div>
-          <div class="resource-grid">
-            <article class="resource-card">
-              <span class="resource-tag">Guía fundamental</span>
-              <h3>¿Qué es el arrendamiento puro?</h3>
-              <p>Ventajas, desventajas, diferencias frente a otras alternativas y preguntas que conviene resolver antes de contratar.</p>
-              <a class="learn-link" href="recursos/que-es-arrendamiento-puro">Leer la guía <span aria-hidden="true">→</span></a>
-            </article>
-            <article class="resource-card">
-              <span class="resource-tag">Operación</span>
-              <h3>¿Qué debe resolver un sistema de arrendamiento?</h3>
-              <p>Los procesos que deben quedar conectados para evitar hojas aisladas, dobles capturas y decisiones con información incompleta.</p>
-              <a class="learn-link" href="recursos/sistema-arrendamiento-puro">Conocer los procesos <span aria-hidden="true">→</span></a>
-            </article>
-            <article class="resource-card">
-              <span class="resource-tag">Cobranza</span>
-              <h3>Cómo controlar la cartera de una arrendadora</h3>
-              <p>Rentas, facturas, pagos, vencimientos y seguimiento para dar contexto a cobranza y visibilidad a dirección.</p>
-              <a class="learn-link" href="recursos/software-cobranza-arrendadoras-mexico">Leer sobre cobranza <span aria-hidden="true">→</span></a>
-            </article>
-          </div>
-          <nav class="depth-links" aria-label="Más guías para arrendadoras">
-            <span>Más para arrendadoras:</span>
-            <a href="recursos/que-es-arrendamiento-puro">Qué es el arrendamiento puro</a>
-            <a href="recursos/sistema-arrendamiento-puro">Qué es un sistema de arrendamiento puro</a>
-            <a href="recursos/software-cobranza-arrendadoras-mexico">Cobranza</a>
-            <a href="recursos/software-contratos-arrendamiento-puro">Contratos</a>
-            <a href="recursos/control-activos-arrendamiento-puro">Control de activos</a>
-            <a href="recursos/consulta-multas-vehiculares-arrendadoras">Multas vehiculares</a>
-            <a href="recursos/comprar-o-arrendar-activo">Comprar o arrendar un activo</a>
-            <a href="recursos/arrendamiento-puro">Ver el Blog Janco</a>
-          </nav>
         </div>
       </section>
 
@@ -472,7 +418,58 @@
           </form>
         </div>
       </section>
+      <section class="resource-home" id="recursos">
+        <div class="home-shell">
+          <div class="center-head">
+            <span class="section-kicker">Blog Janco</span>
+            <h2>Ideas para decidir y operar con claridad</h2>
+            <p>Análisis y guías sobre arrendamiento puro, contratos, activos, cobranza y tecnología para arrendadoras.</p>
+          </div>
+          <div class="resource-grid">
+            <article class="resource-card">
+              <span class="resource-tag">Guía fundamental</span>
+              <h3>¿Qué es el arrendamiento puro?</h3>
+              <p>Ventajas, desventajas, diferencias frente a otras alternativas y preguntas que conviene resolver antes de contratar.</p>
+              <a class="learn-link" href="recursos/que-es-arrendamiento-puro">Leer la guía <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="resource-card">
+              <span class="resource-tag">Operación</span>
+              <h3>¿Qué debe resolver un sistema de arrendamiento?</h3>
+              <p>Los procesos que deben quedar conectados para evitar hojas aisladas, dobles capturas y decisiones con información incompleta.</p>
+              <a class="learn-link" href="recursos/sistema-arrendamiento-puro">Conocer los procesos <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="resource-card">
+              <span class="resource-tag">Cobranza</span>
+              <h3>Cómo controlar la cartera de una arrendadora</h3>
+              <p>Rentas, facturas, pagos, vencimientos y seguimiento para dar contexto a cobranza y visibilidad a dirección.</p>
+              <a class="learn-link" href="recursos/software-cobranza-arrendadoras-mexico">Leer sobre cobranza <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+          <nav class="depth-links" aria-label="Más guías para arrendadoras">
+            <span>Más para arrendadoras:</span>
+            <a href="recursos/que-es-arrendamiento-puro">Qué es el arrendamiento puro</a>
+            <a href="recursos/sistema-arrendamiento-puro">Qué es un sistema de arrendamiento puro</a>
+            <a href="recursos/software-cobranza-arrendadoras-mexico">Cobranza</a>
+            <a href="recursos/software-contratos-arrendamiento-puro">Contratos</a>
+            <a href="recursos/control-activos-arrendamiento-puro">Control de activos</a>
+            <a href="recursos/consulta-multas-vehiculares-arrendadoras">Multas vehiculares</a>
+            <a href="recursos/comprar-o-arrendar-activo">Comprar o arrendar un activo</a>
+            <a href="recursos/arrendamiento-puro">Ver el Blog Janco</a>
+          </nav>
+        </div>
+      </section>
+
     </main>
+
+    <dialog class="demo-dialog" aria-labelledby="demo-dialog-title" data-demo-dialog>
+      <div class="demo-dialog-content">
+        <button class="demo-dialog-close" type="button" aria-label="Cerrar ventana" data-demo-dialog-close><img src="/assets/icons/x-navy.svg" alt="" width="22" height="22"></button>
+        <p class="new-eyebrow">Demo para arrendadoras</p>
+        <h2 id="demo-dialog-title">Conozcamos tu operación.</h2>
+        <p class="demo-dialog-intro">Cuéntanos cómo trabaja tu arrendadora y qué te gustaría conectar.</p>
+        <div data-demo-dialog-slot></div>
+      </div>
+    </dialog>
 
     <footer class="site-footer home-footer">
       <div class="home-shell footer-main">
@@ -517,6 +514,7 @@
       <span class="visually-hidden">Enviar WhatsApp a Janco</span>
     </a>
     <script defer src="/assets/main.js?v=20260808a"></script>
+    <script defer src="/assets/home-redesign-20261030.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
   </body>
